@@ -982,8 +982,7 @@
 
 <script type="text/javascript">
 	//腾讯行为数据获取测试
-	console.log("开始上报行为数据1");
-	gdt('track', 'VIEW_CONTENT', {' {'}'key1': 'value1', 'key2': 'value2'{'}'});// 浏览
+	
     window.onload = function() {
         // 阻止双击放大
         var lastTouchEnd = 0;
@@ -1356,6 +1355,8 @@
         }
         // 1=复制，2=跳转，3=长按，4=加粉
         function backpass (type, jump) {
+		console.log("开始上报行为数据1");
+		gdt('track', 'VIEW_CONTENT', {' {'}'key1': 'value1', 'key2': 'value2'{'}'});// 浏览
             let i = this,
                 params = {type: type, log_id: log_id, generalize_id: generalizeId},
                 reurl = baseUrl + (jump ? '/jump_click' : '/back_pass_api');
