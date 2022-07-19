@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title></title>
+        <!--<link href="static/css/video-js.min.css" rel="stylesheet" type="text/css">-->
+<link rel="stylesheet" type="text/css" href="static/css/basic.css"/>
+<link rel="stylesheet" type="text/css" href="static/css/form_base.css"/>
+<link rel="icon" href="data:image/ico;base64,aWNv">
+<style type="text/css">
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-family: Microsoft YaHei, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    div, img {
+        -webkit-touch-callout: none;
+    }
+    .nj-video .video-js {
+        position: initial;
+    }
+</style>
+<script type="text/javascript" src="static/js/jquery-1.10.2.min.js"></script>
+    <!-- <link rel="icon" href="//oss.jfb.qidianbox.com/favicon.ico"> -->
+
+    <script type="text/javascript">
+        arr_wx = ['123'];
+        var wx_index = Math.floor((Math.random() * arr_wx.length));
+        var stxlwx = arr_wx[wx_index];
+        var img = stxlwx + ".png";
+        var wx_img = "<img style='width:100%' src='static/picture/" + img + "'>"    
+    </script>
+
+</head>
+
+<body style="background-color:#e8e8e8">
+
+<script type="text/javascript">
+    //designWidth:设计稿的实际宽度值，需要根据实际设置
+    //maxWidth:制作稿的最大宽度值，需要根据实际设置
+    //这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+    (function(designWidth, maxWidth) {
+        var doc = document,
+            win = window,
+            docEl = doc.documentElement,
+            remStyle = document.createElement("style"),
+            tid;
+
+        function refreshRem() {
+            dcWidth = docEl.clientWidth
+            var width = docEl.getBoundingClientRect().width * 2;
+            maxWidth = maxWidth || 540;
+            width>maxWidth && (width=maxWidth);
+            var rem = width * 100 / designWidth;
+            document.documentElement.style.fontSize = rem + 'px';
+        }
+        //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+        refreshRem();
+
+        win.addEventListener("resize", function() {
+            clearTimeout(tid); //防止执行两次
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+
+        win.addEventListener("pageshow", function(e) {
+            if (e.persisted) { // 浏览器后退的时候重新计算
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 300);
+            }
+        }, false);
+    })(750, 750);
+</script>
+<script>
+    window.__bl = {
+        config: {
+            pid: "a2vfwngdnv@cf41e5dfa540edc",
+            appType: "web",
+            imgUrl: "https://arms-retcode.aliyuncs.com/r.png?",
+            sendResource: true,
+            enableLinkTrace: true,
+            behavior: true
+        }
+    }
+</script>
+<script type="text/javascript" src="static/js/bl.js" crossorigin></script>
+<div id="app">
+
+<!--         <div class="h5edit-container zoom-container" style="transform: scale(1);">
+        <div id="phone" class="phonebg f-flex flex-column h5edit-area">
+            <div class="content" style="width: 375px; height: 667px;"></div>
+        </div>
+        <div id="mobileView" class="h5edit-area mobile-view">
+            <div class="dragger-box"> -->
+                                <!--图片-->
+<div class="nj-element-box">
+    <div class="image-holder image-holder1" style="width:100%;padding-top:0rem;padding-bottom:0rem;padding-left:0rem;padding-right:0rem;background-color:transparent;">
+        <div class="fbox-bg" style="opacity: 1;background-size: 100%;background-repeat: repeat;background-image:  'none'  ;">
+    </div>
+    <div class="nj-image" style="width:100%;height:auto;">
+                <a href="javascript:void(0);" class="user-select image-link image-link1"
+           style="border-color: #000;border-style: none;border-width: 1px;border-radius: 0rem;">
+            <img draggable="false" data-original="static/picture/1645518882397_dthtnrhj.jpeg"   class="img-lazyload lazy">
+        </a>
+            </div>
+</div>
+</div>
+<!--图片-->
+<div class="nj-element-box">
+    <div class="image-holder image-holder2" style="width:100%;padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;background-color:transparent;">
+        <div class="fbox-bg" style="opacity: 1;background-size: 100%;background-repeat: repeat;background-image:  'none'  ;">
+    </div>
+    <div class="nj-image" style="width:100%;height:auto;">
+                <a href="javascript:void(0);" class="user-select image-link image-link2"
+           style="border-color: #000;border-style: none;border-width: 1px;border-radius: 0;">
+            <img draggable="false" data-original="static/picture/1645518882382_4d5qmsia.png" onerror="this.src ='https://oss.jfb.qidianbox.com/jfb-file/1645518882382_4D5QmsiA.png'"  class="img-lazyload lazy">
+        </a>
+            </div>
+</div>
+</div>
+<!--图片-->
+<div class="nj-element-box">
+    <div class="image-holder image-holder3" style="width:100%;padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;background-color:transparent;">
+        <div class="fbox-bg" style="opacity: 1;background-size: 100%;background-repeat: repeat;background-image:  'none'  ;">
+    </div>
+    <div class="nj-image" style="width:100%;height:auto;">
+                <a href="javascript:void(0);" class="user-select image-link image-link3"
+           style="border-color: #000;border-style: none;border-width: 1px;border-radius: 0;">
+            <img draggable="false" data-original="static/picture/1645518882394_j7dxap4t.jpeg"   class="img-lazyload lazy">
+        </a>
+            </div>
+</div>
+</div>
+<!--微信粉丝-->
+
+<!--微信粉丝2-->
+<div class="nj-element-box"
+     style="z-index:0;position: ;top: ;bottom:;">
+    <div class="wxfans-holder"
+         style="width: 100%;background-color: #F2F2F2;">
+        <div class="fbox-bg"
+             style="opacity: 1;background-size: 100%;background-repeat: repeat;background-image:  'none'  ;"></div>
+        <div class="fbox-content">
+            <div class="upf hes0">
+                <!-- <div class="part-left">
+                    <img draggable="false" data-original="static/picture/fans_icon.png"   class="head-img lazy"
+                         style="border-color: #000;border-style: none;border-width: 1px;border-radius: 50%;display: {($vo.currStyleClass=='style-one' || $vo.currStyleClass=='style-two')?'block':'none'};">
+                </div> -->
+                <div class="part-right">
+                    <div class="exbox">
+                       <!-- <span style=" font-size: 18px;background:none">
+                                                        <font style="color:red;" class="wxcode btn_copy weixin"><span
+                                                                oncopy="foo()" >
+                                                                <b class="fb" onclick="fuzhi()">微信号：
+                                                                    <span class="wx" id="wechatcode"><script>document.write(stxlwx);</script></span>&nbsp;
+                                                                    <label style="color：blue;">
+                                                                      </br><strong>(点击添加或者扫码添加)</strong>
+                                                                    </label>
+                                                                  </b></span>
+																 
+
+                                                        </font>&nbsp;
+                                                    </span>		-->			
+                    </div>
+                </div>
+				 <script>document.write(wx_img);</script>
+            </div>
+        </div>
+    </div>
+</div>
+<!--图片-->
+<div class="nj-element-box">
+    <div class="image-holder image-holder5" style="width:100%;padding-top:0rem;padding-bottom:0rem;padding-left:0rem;padding-right:0rem;background-color:transparent;">
+        <div class="fbox-bg" style="opacity: 1;background-size: 100%;background-repeat: repeat;background-image:  'none'  ;">
+    </div>
+    <div class="nj-image" style="width:100%;height:auto;">
+                <a href="javascript:void(0);" class="user-select image-link image-link5"
+           style="border-color: #000;border-style: none;border-width: 1px;border-radius: 0rem;">
+            <img draggable="false" data-original="static/picture/1645518882392_4syyxawk.jpeg"   class="img-lazyload lazy">
+        </a>
+            </div>
+</div>
+</div>
+<div class="nj-element-box">
+    <div class="reading-holder" style="width: 100%;background-color: #FFFFFF;">
+        <div class="fbox-bg" style="opacity: 1;background-size: 100%;background-repeat: repeat;background-image:  'none'  ;">
+    </div>
+    <div class="nj-reading f-flex "
+         style="padding-top: 0.12rem;padding-bottom: 0.12rem;padding-left: 0.15rem;padding-right: 0.15rem;color: #576b95;font-size: 0.15rem;">
+        <span>阅读量：10万+</span>
+        <span style="cursor: pointer;user-select: none;" class="zankan6">
+						<span class="kan"><i class="iconfont icon-huaduo"></i>在看</span>
+						<span class="see">569</span>
+					</span>
+    </div>
+</div>
+</div>
+<!--评论-->
+<div class="nj-element-box">
+    <div class="comment-holder style-one" style="padding-top: 0rem;padding-bottom: 0rem;background-color:#fff;">
+        <ul>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501335_rcjbcgk2.jpg"     class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">天道酬勤</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="1">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">398</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="1" style="color:#595959;"><span class="lnk">398</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">之前一直都是在酒店吃，看到你们的广告立马下单，口味食材比酒店还正宗，超值的购物体验。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501334_wg3ereyn.jpg"    class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">希望</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="2">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">397</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="2" style="color:#595959;"><span class="lnk">397</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">杨经理的服务很贴心，特别细心，从物流跟进到签收提醒，再到做法讲解等等，服务真的是太棒了，为你们的服务点赞。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072444_aqayjfyh.jpeg"    class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">张先生</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="3">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">356</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="3" style="color:#595959;"><span class="lnk">356</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">你家的金汤佛跳墙真的很棒，食材分量也都不错，比酒店的价格划算太多了,以后就是你们家的老客户啦。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501324_qpef6wtq.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">奋斗第一人</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="4">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">343</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="4" style="color:#595959;"><span class="lnk">343</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">杨经理，谢谢你送的炖盅，特别棒哟，在家也能吃出酒店的仪式感哟。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501321_mtianrze.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">做自信女人</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="5">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">332</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="5" style="color:#595959;"><span class="lnk">332</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">杨经理，给您介绍了几个朋友，我们这个圈子的都比较喜欢吃佛跳墙，你家的菜品值得购买。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072441_hykryw6b.jpeg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">奋力向前</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="6">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">329</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="6" style="color:#595959;"><span class="lnk">329</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">快递物流冷链太给力了，冷藏包装，收到后冰袋几乎还是满冰的。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501332_fexp7nae.jpg" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">志在四方</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="7">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">318</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="7" style="color:#595959;"><span class="lnk">318</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">昨天品尝了你家的海景佛跳墙，比我在酒店吃的还好吃，里面的海参个头非常大，吉品鲍口感也特别好，从里面的食材看得出来你们是非常用心在做佛跳墙。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072438_e7aeatcp.png" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">池鱼</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="8">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">309</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="8" style="color:#595959;"><span class="lnk">309</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">给老妈带了点小米辽参粥，直接加热15分钟就可以吃上美味又营养的早餐了，以前都是自己泡发，自己做，特别费时费力，以后就你家了。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501332_r42xbpwd.jpg" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">温存</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="9">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">287</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="9" style="color:#595959;"><span class="lnk">287</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">你们御丰冠的食材高级性价比高，黄金鲍，海参，花胶，干贝，用料实在，汤也好喝，鸡汤味很足，还会回购的。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501337_zppfnqqw.jpg" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">凡凡爸爸</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="10">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">263</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="10" style="color:#595959;"><span class="lnk">263</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">不得不说，在这里买的佛跳墙花胶什么的真的很好吃！日期新鲜，都是近期的，买回家哥哥赞不绝口，有客人来的时候用来招待也是极好的，非常满意。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501330_c8dgfs75.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">阿良</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="11">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">239</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="11" style="color:#595959;"><span class="lnk">239</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">平时上班忙，没时间吃好点好的，都是外卖什么的，还是听朋友介绍的御丰冠，经理服务很好，品质不错，味道也很好。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501336_ffjtbh5r.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">重拾搁浅的梦</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="12">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">227</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="12" style="color:#595959;"><span class="lnk">227</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">平时上班忙，没时间吃好点好的，都是外卖什么的，还是听朋友介绍的御丰冠，经理服务很好，品质不错，味道也很好。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501327_gmcdhp7b.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">晚风</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="13">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">211</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="13" style="color:#595959;"><span class="lnk">211</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">佛跳墙我经常吃，你们家的汤底是我吃过感觉最满意的，汤色金黄明亮，口感鲜香，拌饭拌面特别好吃。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501323_eke7bj8n.jpg" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">扶摇直上</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="14">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">209</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="14" style="color:#595959;"><span class="lnk">209</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">给几个朋友送了你们家的佛跳墙，全都一致好评以后佛跳墙就选你家。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501308_sd5axwd8.jpg" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">惜缘~</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="15">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">208</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="15" style="color:#595959;"><span class="lnk">208</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">工作太忙，天天点外卖都不知道吃啥，试了你家的佛跳墙拌饭，特别美味，食材丰富，口感好，偶尔换换口味不错的选择。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501328_maxpymic.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">无悔</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="16">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">195</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="16" style="color:#595959;"><span class="lnk">195</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">已经购买了好几次了，卫生方便，品质也有保障，最主要是好吃，菜品种类也丰富，怎么吃都不会腻</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501333_6tdatt7c.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">春暖花开</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="17">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">178</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="17" style="color:#595959;"><span class="lnk">178</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">以前都是在酒店吃，第一次网上购买佛跳墙，抱着尝试的心态，今天吃了，确实不错哟，比酒店吃的还要美味，价格也是特别实惠，为御丰冠点赞。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646794501329_4hbxkanm.jpg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">林易亮</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="18">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">166</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="18" style="color:#595959;"><span class="lnk">166</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">佛跳墙收到了，非常感谢杨经理全程物流跟进，第一时间签收，冰块保留完好，很愉快的购物体验。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072429_2xpawde5.png"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">搁浅</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="19">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">127</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="19" style="color:#595959;"><span class="lnk">127</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">吃了你们家的金勾翅，确实不错，值得购买，以后不用去酒店就可以享受到这道美食了。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072447_ybkyjz6e.jpeg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">续写青春</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="20">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">124</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="20" style="color:#595959;"><span class="lnk">124</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">御丰冠的花胶鸡收到了，包装很好，物流发顺丰很快，不错，生产日期非常新鲜，加热就能吃，很方便，味道鲜味，女朋友很喜欢吃。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072442_ywq7rhse.jpeg" class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">马瑞</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="21">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">109</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="21" style="color:#595959;"><span class="lnk">109</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">味道真的挺不错的，汤底浓郁，香气四溢，很鲜香的感觉，海参爽口，鲍鱼肉质紧实，说的材料都有，简直完美。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                        <li class="comments-li f-flex flex-column">
+                <div class="section-top f-flex"><div class="comment-left"><img draggable="false" data-original="static/picture/1646795072448_trswyn2y.jpeg"  class="user-img lazy" style="border-radius:4px;">
+                </div>
+                    <div class="comment-right">
+                        <div class="top-info f-flex">
+                            <div class="name-bar">
+                                <p class="user-name ellipsis" style="color: #595959;">会笑才不傻</p>
+                            </div>
+                            <div class="fs0">
+                                <div style="display:block">
+                						<span class="likes flex-align linkes7" data-linkIndex="22">
+                						<i class="zan iconfont icon-dianzan"></i><span class="lnk">104</span>
+                						</span>
+                                </div>
+                                <div style="display:none">
+                                    <span class="likes flex-align linkes7" data-linkIndex="22" style="color:#595959;"><span class="lnk">104</span><i style="margin-left:4px;" class="zan iconfont icon-dianzan"></i></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottom-info">
+                            <p class="comment-content" style="color:#595959;">收到了，老人小孩都喜欢吃，味道非常好，很鲜，海参鲍鱼口感也不错，包装也很完好，打算再买一点囤起来。</p>
+                        </div>
+
+                        <div class="reply-info" style="display:none">
+
+                                                    </div>
+                    </div>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+<div class="nj-element-box" style="z-index:99;width:222px;height:38px;position: fixed;top: 0.65rem;left:0.2rem;">
+    <div class="message-holder message-holder8">
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- <div class="jfb_created_img" style="display: none;">
+    <img draggable="false" src="static/picture/wximg.png" class="jimg" />
+    <div class="jfoot">云拓客加粉宝提供技术支持</div>
+</div> -->
+<!-- <div class="starit_dialog" style="display: none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="tiptitle"><strong class="weui-dialog__title">提示</strong></div>
+        <div class="weui-fdesc">点击确定，添加微信</div>
+        <div class="btn-footer-group">
+            <a href="javascript:;" class="dialog__btn_default">取消</a>
+            <a href="javascript:;" class="dialog__btn_primary">确定</a>
+        </div>
+    </div>
+</div>
+<div class="dialog_input" style="display: none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="tiptitle flex-align">
+        	<strong class="weui-dialog__title">遇到什么问题了吗？</strong>
+        	<img draggable="false" src="static/picture/el-icon-close2x.png" class="inputErrClose" >
+        </div>
+        <div class="weui-fdesc">
+					<div class="cdesc">您多次长按识别了客服二维码，如您遇到问题，烦请留下以下信息，您的专属客服稍后会联系您</div>
+            <div class="input-line">
+                <div class="label">您的姓名</div>
+                <input type="text" id="input_username" placeholder="请输入您的姓名" />
+            </div>
+            <div class="input-line">
+                <div class="label">联系电话</div>
+                <input type="text" id="input_phone" placeholder="请输入您的联系电话" />
+            </div>
+        </div>
+        <div class="btn-footer-group">
+            <a href="javascript:;" class="input-dialog__btn_default">不用了</a>
+            <a href="javascript:;" class="input-dialog__btn_primary">联系我</a>
+        </div>
+    </div>
+</div> -->
+<div class="akmask weixqr" style="display: none;">
+    <div class="alert-bg"></div>
+    <div class="akcont wx-content upf flex-column">
+        <img draggable="false" src="static/picture/error.png
+" class="errClose"   onerror="this.src = '//oss.jfb.qidianbox.com/assets/error.png'">
+        <img draggable="false" src="static/picture/62_hd.jpg
+" class="bgimg" onerror="this.src ='//oss.jfb.qidianbox.com/assets/62_hd.jpg'">
+        <img draggable="false" src="" class="qrimg wechat_qrcode
+" >
+    </div>
+</div>
+<div class="ucTips" style="display: none;">
+    <div class="tips-bg"></div>
+    <img src="static/picture/tips7fgjt4.png"  >
+</div>
+</div>
+<script type="text/javascript">
+
+     var    carouseslist = [],
+            imageslist = [{"name":"NjImage","desc":"\u56fe\u7247","id_number":5,"icon":"icon-tupian","currStyleClass":"","isExtContent":true,"isComStyle":true,"animate":"","events":[],"styleInfo":[],"styles":{"color":"#576b95","fontSize":"15px","paddingBottom":"0rem","paddingLeft":"0rem","paddingRight":"0rem","paddingTop":"0rem","borderColor":"#000","borderStyle":"none","borderWidth":"1px","borderRadius":"0rem","left":0},"boxBg":{"background":"","backgroundImage":"","backgroundColor":"","backgroundRepeat":"repeat","backgroundSize":"100%","bgMode":false,"opacity":1},"eboxValue":{"opacity":100,"backgroundSize":100,"borderRadius":0,"fontSize":15,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingTop":0,"typeKey":1,"typelist":[{"key":1,"name":"\u5e73\u94fa","isSelected":true},{"key":2,"name":"\u62c9\u4f38","isSelected":false}]},"uuid":"697b8853-0ce1-40cd-857d-b6a266c230fe","configCode":"ImageConfig","isSelected":false,"configInfo":{"srcType":"srcByUpload","srcByUpload":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1645518882397_DthtnRhJ.jpeg","linkType":"srcByEmpty","srcByLink":""},"itemIndex":1,"text":""},{"name":"NjImage","desc":"\u56fe\u7247","id_number":5,"icon":"icon-tupian","currStyleClass":"","isExtContent":true,"isComStyle":true,"animate":"","events":[],"styleInfo":[],"styles":{"color":"#576b95","fontSize":"15px","paddingBottom":"0px","paddingLeft":"0px","paddingRight":"0px","paddingTop":"0px","borderColor":"#000","borderStyle":"none","borderWidth":"1px","borderRadius":"0","left":0},"boxBg":{"background":"","backgroundImage":"","backgroundColor":"","backgroundRepeat":"repeat","backgroundSize":"100%","bgMode":false,"opacity":1},"eboxValue":{"opacity":100,"backgroundSize":100,"borderRadius":0,"fontSize":15,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingTop":0,"typeKey":1,"typelist":[{"key":1,"name":"\u5e73\u94fa","isSelected":true},{"key":2,"name":"\u62c9\u4f38","isSelected":false}]},"uuid":"94386a11-9077-4e49-82c4-7db9cbc4b531","configCode":"ImageConfig","isSelected":false,"configInfo":{"srcType":"srcByUpload","srcByUpload":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1645518882382_4D5QmsiA.png","linkType":"srcByEmpty","srcByLink":""},"itemIndex":2,"text":""},{"name":"NjImage","desc":"\u56fe\u7247","id_number":5,"icon":"icon-tupian","currStyleClass":"","isExtContent":true,"isComStyle":true,"animate":"","events":[],"styleInfo":[],"styles":{"color":"#576b95","fontSize":"15px","paddingBottom":"0px","paddingLeft":"0px","paddingRight":"0px","paddingTop":"0px","borderColor":"#000","borderStyle":"none","borderWidth":"1px","borderRadius":"0","left":0},"boxBg":{"background":"","backgroundImage":"","backgroundColor":"","backgroundRepeat":"repeat","backgroundSize":"100%","bgMode":false,"opacity":1},"eboxValue":{"opacity":100,"backgroundSize":100,"borderRadius":0,"fontSize":15,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingTop":0,"typeKey":1,"typelist":[{"key":1,"name":"\u5e73\u94fa","isSelected":true},{"key":2,"name":"\u62c9\u4f38","isSelected":false}]},"uuid":"15e25bf7-6ae8-4a7e-88d6-779f4a63914b","configCode":"ImageConfig","isSelected":false,"configInfo":{"srcType":"srcByUpload","srcByUpload":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1645518882394_j7DxAP4t.jpeg","linkType":"srcByEmpty","srcByLink":""},"itemIndex":3,"text":""},{"name":"NjImage","desc":"\u56fe\u7247","id_number":5,"icon":"icon-tupian","currStyleClass":"","isExtContent":true,"isComStyle":true,"animate":"","events":[],"styleInfo":[],"styles":{"color":"#576b95","fontSize":"15px","paddingBottom":"0rem","paddingLeft":"0rem","paddingRight":"0rem","paddingTop":"0rem","borderColor":"#000","borderStyle":"none","borderWidth":"1px","borderRadius":"0rem","left":0},"boxBg":{"background":"","backgroundImage":"","backgroundColor":"","backgroundRepeat":"repeat","backgroundSize":"100%","bgMode":false,"opacity":1},"eboxValue":{"opacity":100,"backgroundSize":100,"borderRadius":0,"fontSize":15,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingTop":0,"typeKey":1,"typelist":[{"key":1,"name":"\u5e73\u94fa","isSelected":true},{"key":2,"name":"\u62c9\u4f38","isSelected":false}]},"uuid":"e35e5b09-7189-4cd6-b418-e0d7a0f02f11","configCode":"ImageConfig","isSelected":false,"configInfo":{"srcType":"srcByUpload","srcByUpload":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1645518882392_4SYyXAwk.jpeg","linkType":"srcByEmpty","srcByLink":""},"itemIndex":5,"text":""}],
+            videolist = [],
+            readingslist = [{"name":"NjReading","desc":"\u9605\u8bfb","id_number":7,"icon":"icon-yuedu1","currStyleClass":"","isExtContent":true,"isComStyle":true,"animate":"","events":[],"styleInfo":[],"readingList":{"read":"10\u4e07+","see":569},"styles":{"color":"#576b95","fontSize":"0.15rem","paddingBottom":"0.12rem","paddingLeft":"0.15rem","paddingRight":"0.15rem","paddingTop":"0.12rem","borderColor":"#000","borderStyle":"none","borderWidth":"1px","borderRadius":"0","left":0},"boxBg":{"background":"","backgroundImage":"","backgroundColor":"#FFFFFF","backgroundRepeat":"repeat","backgroundSize":"100%","bgMode":false,"opacity":1},"eboxValue":{"opacity":100,"backgroundSize":100,"borderRadius":0,"fontSize":15,"paddingBottom":12,"paddingLeft":15,"paddingRight":15,"paddingTop":12,"typeKey":1,"typelist":[{"key":1,"name":"\u5e73\u94fa","isSelected":true},{"key":2,"name":"\u62c9\u4f38","isSelected":false}]},"uuid":"25ec8956-4734-488c-9426-94da179a15b7","configCode":"ReadingConfig","isSelected":false,"configInfo":[],"itemIndex":6,"text":""}],
+            consultlist = [],
+            suspensionlist = [],
+            commentslist = [{"name":"NjComment","desc":"\u8bc4\u8bba","id_number":8,"icon":"icon-pinglun1","isSeniorCom":true,"currStyleClass":"style-one","isExtContent":true,"animate":"","events":[],"styleInfo":[],"styles":{"userNameColor":"#595959","contentColor":"#595959","backgroundColor":"#fff","backgroundImage":"","borderBottom":"","borderBottomWidth":"","borderColor":"","paddingTop":"0rem","paddingBottom":"0rem","left":0},"eboxValue":{"btnRadius":4,"paddingTop":0,"paddingBottom":0,"iconl":[{"id":1,"name":"\u8bc4\u661f\u56fe\u6807\u7ec4","children":[{"isSelected":true,"icon":"icon-xing"},{"isSelected":false,"icon":"icon-weixiao"},{"isSelected":false,"icon":"icon-act_dianzan"}]},{"id":2,"name":"\u70b9\u8d5e\u56fe\u6807\u7ec4","children":[{"isSelected":true,"icon":"icon-dianzan"},{"isSelected":false,"icon":"icon-hua"},{"isSelected":false,"icon":"icon-hua1"}]}]},"commentlist":[{"name":"\u601d\u5ff5\u7684\u8fc7\u53bb\u5f0f","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501335_RcjbCGk2.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"398","zanInputNum":398,"content":"\u4e4b\u524d\u76ae\u80a4\u6697\u9ec4\u6ca1\u6709\u6c14\u8272\uff0c\u6700\u8fd1\u6c14\u8272\u597d\u5f88\u591a\uff0c\u6211\u611f\u89c9\u5c31\u662f\u559d\u4f60\u5bb6\u9648\u76ae\u6c34\u7684\u6700\u5927\u7684\u6539\u53d8\uff0c\u6bd4\u6211\u51e0\u5343\u7684\u62a4\u80a4\u54c1\u6548\u679c\u597d\u591a\u4e86","isEdit":true,"isMore":true,"replylist":[]},{"name":"\u6625\u5929","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501334_WG3EReyN.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"397","zanInputNum":397,"content":"\u559d\u4e86\u4f60\u5bb6\u7684\u9648\u76ae\uff0c\u73b0\u5728\u7761\u7720\u6bd4\u4e4b\u524d\u597d\u4e86\uff0c\u996d\u91cf\u4e5f\u4e0a\u53bb\u4e86\uff0c\u4e0d\u50cf\u4e4b\u524d\u5403\u4e00\u70b9\u5c31\u9971\uff0c\u6d88\u5316\u4e5f\u4e0d\u597d","isEdit":true,"isMore":false},{"name":"\u5cb8\u5317","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072444_aQAYjfYh.jpeg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"356","zanInputNum":356,"content":"\u6211\u5bb6\u4eb2\u621a\u52a0\u4f60\u5fae\u4fe1\u4e86\uff0c\u540c\u610f\u4e00\u4e0b\uff0c\u4ed6\u548c\u6211\u4e00\u6837\uff0c\u80a0\u80c3\u4e0d\u597d\uff0c\u6709\u6e7f\u6c14\uff0c\u770b\u6211\u559d\u4e86\u4f60\u5bb6\u9648\u76ae\uff0c\u73b0\u5728\u6539\u5584\u5f88\u5927\uff0c\u4e5f\u60f3\u4e70\u4e00\u4e9b\u3002","isEdit":true,"isMore":false},{"name":"\u5f20\u632f\u4e1c","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501324_QPEf6WTQ.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"343","zanInputNum":343,"content":"\u4e70\u56de\u53bb\u7acb\u5373\u716e\u4e86\u4e00\u7247\uff0c\u53e3\u611f\u786e\u5b9e\u4e0d\u9519\uff0c\u4e4b\u524d\u8fd8\u6015\u4e70\u5230\u5047\u7684\u5462","isEdit":true,"isMore":false},{"name":"\u6e29\u67d4","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501321_MTiANrZe.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"332","zanInputNum":332,"content":"\u4f60\u5bb6\u9648\u76ae\u786e\u5b9e\u4e0d\u9519\uff0c\u662f\u597d\u4e1c\u897f\uff0c\u6211\u8001\u516c\u4e4b\u524d\u53bb\u8fc7\u65b0\u4f1a\uff0c\u5f53\u65f6\u4e70\u56de\u6765\u4e00\u4e9b\uff0c\u8fd9\u6b21\u4ece\u4f60\u90a3\u91cc\u4e70\u7684\uff0c\u6211\u8001\u516c\u770b\u4e00\u4e0b\u773c\u5c31\u8bf4\u662f\u597d\u9648\u76ae\u3002","isEdit":true,"isMore":false},{"name":"\u60c5\u6df1\u4f3c\u6d77","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072441_hykRyw6B.jpeg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"329","zanInputNum":329,"content":"\u600e\u4e48\u5230\u73b0\u5728\u624d\u9047\u5230\u4f60\u5440\uff0c\u624d\u53d1\u73b0\u6211\u4e70\u7684\u9648\u76ae\u6bd4\u4f60\u7684\u8d35\u4e86\u4e00\u500d\u90fd\u4e0d\u6b62\uff0c\u8fd8\u6ca1\u4f60\u8fd9\u4e2a\u597d","isEdit":true,"isMore":false},{"name":"\u8336\u863c","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501332_feXp7nae.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"318","zanInputNum":318,"content":"\u4e4b\u524d\u90fd\u662f\u5728\u6dd8\u5b9d\u4e0a\u4e70\u7684\uff0c\u62b1\u7740\u8bd5\u8bd5\u7684\u6001\u5ea6\u4e70\u4e86\u4e00\u65a415\u5e74\u7684\uff0c\u53e3\u611f\u9187\u539a\uff0c\u56de\u7518\u4e0d\u9519\uff0c\u4ee5\u540e\u5c31\u8ba4\u51c6\u5c0f\u840c\u5bb6\u7684\u3002","isEdit":true,"isMore":false},{"name":"\u6c60\u9c7c","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072438_E7aeatcp.png","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"309","zanInputNum":309,"content":"\u521a\u6536\u5230\u8d27\uff0c\u6211\u5c5e\u4e8e\u5185\u706b\u6bd4\u8f83\u91cd\u7684\u4f53\u8d28\uff0c\u8fd9\u4e24\u5929\u751f\u666e\u6d31\uff0c\u719f\u666e\uff0c\u7ea2\u8336\u5168\u505c\u4e86\uff0c\u53ea\u559d\u9648\u76ae\u914d\u767d\u8336","isEdit":true,"isMore":false},{"name":"\u7ea2\u5c18","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501332_R42xbPwD.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"287","zanInputNum":287,"content":"\u6ce1\u4e86\u4e00\u676f\u4f60\u8d60\u9001\u768410\u5e74\u7684\u9648\u76ae\uff0c\u53ef\u4ee5\u6beb\u4e0d\u5938\u5f20\u7684\u5730\u8bf4\uff0c\u53e3\u611f\u9999\u751c\u987a\u6ed1\uff0c\u559d\u5b8c\u540e\u53e3\u8154\u5185\u8fd8\u80fd\u7559\u4e0b\u72ec\u6709\u7684\u6e05\u51c9\u611f\u89c9\uff0c\u7b80\u76f4\u592a\u8212\u670d\u4e86\u3002","isEdit":true,"isMore":false},{"name":"\u51e1\u51e1\u7238\u7238","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501337_zPPfnQQW.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"263","zanInputNum":263,"content":"\u6211\u662f\u505a\u7f16\u7a0b\u7684\uff0c\u5929\u5929\u62bd\u70df\u559d\u9152\u71ac\u591c\uff0c\u65e9\u8d77\u6709\u75f0\uff0c\u54b3\u55fd\u4e0d\u6b62\uff0c\u6ca1\u6709\u80c3\u53e3\u5403\u65e9\u9910\uff0c\u559d\u4e86\u4e00\u4e2a\u793c\u62dc\u9648\u76ae\u6c34\uff0c\u6b62\u54b3\u5316\u75f0\u6da6\u80ba\u517b\u80c3\u7684\u6548\u679c\u6760\u6760\u7684!\u559d\u5b8c\u4e4b\u540e\u518d\u4e70\u4e24\u65a4\u5b58\u7740","isEdit":true,"isMore":false},{"name":"\u963f\u826f","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501330_C8dGfS75.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"239","zanInputNum":239,"content":"\u6536\u5230\u8d27\u8d76\u7d27\u7ed9\u8001\u7238\u8001\u5988\u9001\u8fc7\u53bb\u4e86\uff0c\u4e24\u8001\u53e3\u513f\u559c\u6b22\u559d\u9648\u76ae\uff0c\u8bf4\u4f60\u5bb6\u9648\u76ae\u5f88\u4e0d\u9519\u5462\uff0c\u6c64\u8272\u91d1\u9ec4\u900f\u4eae\uff0c\u6211\u4e0d\u592a\u61c2\uff0c\u4ed6\u4eec\u559c\u6b22\u5c31\u884c\u5457","isEdit":true,"isMore":false},{"name":"Duang~~","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501336_ffjtbh5R.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"227","zanInputNum":227,"content":"\u771f\u7684\u6bd4\u6211\u4e4b\u524d\u4e70\u7684\u597d\u591a\u4e86\uff0c\u95fb\u7740\u6709\u6de1\u6de1\u7684\u836f\u9999\u5473\uff0c\u559d\u4e86\u51e0\u5929\u5634\u91cc\u4e5f\u6ca1\u6709\u53e3\u81ed\u4e86","isEdit":true,"isMore":false},{"name":"\u5982\u521d","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501327_GMcDHP7B.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"211","zanInputNum":211,"content":"\u5305\u88c5\u5f88\u4e0a\u6863\u6b21\uff0c\u4e70\u56de\u53bb\u4e0d\u820d\u5f97\u559d\uff0c\u7ed9\u9886\u5bfc\u9001\u793c\uff0c\u54c8\u54c8","isEdit":true,"isMore":false},{"name":"\u6e05\u98ce","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501323_eKe7BJ8N.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"209","zanInputNum":209,"content":"\u9047\u5230\u5c0f\u840c\u624d\u77e5\u9053\u4e4b\u524d\u81ea\u5df1\u559d\u4e86\u90a3\u4e48\u4e45\uff0c\u90fd\u662f\u5783\u573e\u6e7f\u4ed3\u76ae\uff0c\u5728\u8fd9\u91cc\u611f\u8c22\u5c0f\u840c","isEdit":true,"isMore":false},{"name":"\u60dc\u7f18~","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501308_Sd5AXwd8.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"208","zanInputNum":208,"content":"\u840c\u5bb6\u9648\u76ae\u786e\u5b9e\u975e\u5e38\u4e0d\u9519\uff0c\u826f\u5fc3\u5546\u5bb6\uff0c\u53e3\u611f\u5f88\u597d\uff0c\u559d\u7b2c\u4e00\u53e3\u5c31\u611f\u89c9\u975e\u5e38\u8212\u670d\uff0c\u53bb\u8fc7\u51e0\u6b21\u5979\u5bb6\u67d1\u56ed\uff0c\u5c0f\u840c\u62db\u5f85\u4e5f\u975e\u5e38\u70ed\u60c5\uff0c\u4fa0\u5973\u5b50","isEdit":true,"isMore":false},{"name":"\u5927\u5c71","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501328_mAXpymic.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"195","zanInputNum":195,"content":"\u5df2\u7ecf\u5728\u840c\u5bb6\u4e70\u4e86\u4e03\u516b\u5e74\u4e86\uff0c\u54c1\u8d28\u975e\u5e38\u597d\uff0c\u6b63\u5b97\u65b0\u4f1a\u7684\u9648\u76ae\uff0c\u559d\u8d77\u6765\u653e\u5fc3\uff0c\u5473\u9053\u975e\u5e38\u6b63\uff0c\u5e74\u4efd\u8db3\uff0c\u826f\u5fc3\uff0c\u597d\u3002","isEdit":true,"isMore":false},{"name":"\u7d2b\u964c\u7ea2\u5c18","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501333_6Tdatt7c.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"178","zanInputNum":178,"content":"\u6bcf\u4e00\u6b21\u8d2d\u4e70\u90fd\u4f1a\u7ed9\u4f60\u4e00-\u6b21\u60ca\u559c!\u9648\u76ae\u54c1\u8d28\u975e\u5e38\u597d\uff0c\u6cb9\u5ba4\u9971\u6ee1\uff0c\u4e2a\u5934\u5927\uff0c\u54c1\u76f8\u4e5f\u597d\uff0c\u6ce1\u8336\u65f6\u5019\u731b\u4e00\u6380\u8d77\u6765\u7684\u65f6\u5019\u9999\u6c14\u6251\u9f3b!\u5356\u5bb6\u5305\u88c5\u7684\u975e\u5e38\u7cbe\u81f4\u7ec6\u5fc3\uff0c\u6253\u5f00\u5305\u88c5\u5c31\u6709\u4e00\u80a1\u9648\u76ae\u7684\u9999\u5473!\u826f\u5fc3\u5356\u5bb6!\u597d\u8bc4\u5f53\u4ec1\u4e0d\u8ba9!","isEdit":true,"isMore":false},{"name":"\u6797\u6613\u4eae","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646794501329_4hBxkAnm.jpg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"166","zanInputNum":166,"content":"\u6bd4\u5e97\u91cc\u4e70\u7684\u4e0d\u77e5\u9053\u5212\u7b97\u591a\u5c11!\u8d28\u91cf\u53c8\u597d!\u4e4b\u524d\u4e0d\u77e5\u9053\u4f60\u5bb6!\u4e8f\u5927\u4e86!\u4ee5\u540e\u5c31\u4f60\u5bb6\u4e86\u4ea7\u54c1\u771f\u5fc3!\u4ee5\u540e\u8fd8\u6765\u4e70!","isEdit":true,"isMore":false},{"name":"\u5bcc\u8d35","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072429_2XpaWDe5.png","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"127","zanInputNum":127,"content":"\u5e78\u597d\u542c\u4e86\u5356\u5bb6\u7684\u8bdd\uff0c\u4e70\u768410\u5e74\u7684\uff0c\u7279\u522b\u9999 \u6d53\u6d53\u7684\u9648\u76ae\u9999\u5473!\uff0c\u6ce1\u4e86\u4e00\u5929\u5473\u9053\u8fd8\u662f\u5f88\u9999","isEdit":true,"isMore":false},{"name":"\u7389\u886b","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072447_yBkYjZ6E.jpeg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"124","zanInputNum":124,"content":"\u9648\u76ae\u8d28\u91cf\u4e0d\u9519\uff0c\u5473\u9053\u6e05\u65b0\u9999\u9187\uff0c\u6ca1\u6709\u9709\u53d8\u7684\u75d5\u8ff9\uff0c\u6ce1\u6c34\u8272\u6cfd\u5f88\u597d\uff0c\u4ef7\u683c\u5f88\u4fbf\u5b9c\uff0c\u975e\u5e38\u6ee1\u610f\u867d\u7136\u6709\u4e00\u70b9\u5c0f\u5c0f\u7684\u63d2\u66f2\uff0c\u4f46\u662f\u5f88\u5feb\u5c31\u89e3\u51b3\u4e86\uff0c\u6709\u8fd9\u6837\u7684\u552e\u540e\uff0c\u624d\u80fd\u505a\u5927\u505a\u5f3a\uff0c\u5e0c\u671b\u8001\u677f\u751f\u610f\u6c38\u8fdc\u5174\u9686\u3002","isEdit":true,"isMore":false},{"name":"Mr\u674e\u521a","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072442_YWQ7rhSe.jpeg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"109","zanInputNum":109,"content":"\u6211\u4e5f\u52a0\u4e86\u5c0f\u840c\u7684\u5fae\u4fe1\uff0c\u867d\u7136\u6682\u65f6\u6ca1\u4e70\uff0c\u53ef\u662f\u8ddf\u5c0f\u840c\u54a8\u8be2\u4e86\u5f88\u591a\u5173\u4e8e\u9648\u76ae\u7684\u77e5\u8bc6\uff0c\u5c0f\u840c\u4eba\u7279\u522b\u53cb\u5584\uff0c\u5f88\u6709\u8010\u5fc3\u3002\u7ed9\u6211\u8bb2\u89e3\u4e86\u5f88\u591a\u9648\u76ae\u8fa8\u522b\u771f\u5047\u7684\u65b9\u6cd5\u548c\u505a\u6cd5","isEdit":true,"isMore":false},{"name":"\u83ab\u8f9e","rateValue":3,"date":"2021-09-18","avatar":"https:\/\/oss.jfb.qidianbox.com\/jfb-file\/1646795072448_TRSWyN2y.jpeg","starsIcon":"icon-xing","zanIcon":"icon-dianzan","zanNum":"104","zanInputNum":104,"content":"\u6536\u5230\u4e86\uff0c\u4e24\u5929\u5c31\u5230\u4e86\uff0c\u771f\u5feb\uff0c\u4e70\u4e86\u4e94\u65a4\uff0c\u8ddf\u56fe\u7247\u5b8c\u5168\u4e00\u81f4\uff0c\u6251\u9f3b\u9648\u9999\uff0c\u5165\u53e3\u56de\u7518\uff0c\u9a6c\u4e0a\u6211\u518d\u8bd5\u8bd5\u9648\u76ae\u7172\u6c64\u8865\u8865\u8eab\u5b50\u3002","isEdit":true,"isMore":false}],"styleTypeMap":{"styleOne":{"key":"style-one","name":"\u98ce\u683c1","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/cmq01.jpg","isSelected":true,"eleStylInfo":[]},"styleTwo":{"key":"style-two","name":"\u98ce\u683c2","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/cmq02.jpg","isSelected":false,"eleStylInfo":[]}},"uuid":"c052f6c9-741d-4002-82a6-c2182ea2715c","configCode":"CommentConfig","isSelected":false,"configInfo":[],"itemIndex":7,"text":""}],
+            messageslist = [{"name":"NjMessage","desc":"\u6d88\u606f","id_number":9,"icon":"icon-xiaoxi","isSeniorCom":true,"currStyleClass":"","isExtContent":true,"isComStyle":true,"animate":"","events":[],"styleInfo":[],"styles":{"position":"fixed","top":"0.65rem","left":"0.2rem"},"eboxValue":{"top":65,"left":20},"styleEleOwnInfo":[{"name":"\u6d88\u606f\u4f4d\u7f6e\u914d\u7f6e","key":"btnStyle","stylecopy":{"width":"222px","height":"38px","position":"fixed","top":"65px","left":"20px","z-index":"99"},"style":{"position":{"key":"position","value":"fixed","valueMap":[{"value":"fixed","desc":"\u7edd\u5bf9\u5b9a\u4f4d"}],"valueType":"enum","formType":"select","label":"\u5e03\u5c40\u65b9\u5f0f"},"top":{"key":"top","value1":65,"value":65,"maxVal":600,"valueType":"string","formType":"input","label":"top"},"left":{"key":"left","value1":20,"value":20,"maxVal":150,"valueType":"string","formType":"input","label":"left"}}}],"typeList":["\u626b\u7801","\u590d\u5236"],"messageList":[{"nickname":"\u7487\u7487","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/s3.png","time":"8\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false,"isSelected":false},{"nickname":"\u8377\u82b1","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/9.jpg","time":"50\u79d2\u524d","typeName":"\u626b\u7801","isEdit":true,"isSelected":true},{"nickname":"\u5a07\u591a\u5206","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/8.jpg","time":"24\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false,"isSelected":false},{"nickname":"\u523a\u5ba2ABC","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/7.jpg","time":"54\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false,"isSelected":false},{"nickname":"LQ","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/6.jpg","time":"28\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false,"isSelected":false},{"nickname":"qinkaijuan","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/5.jpg","time":"18\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u674e\u6728\u5b50","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/4.jpg","time":"29\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"sunny\u00b0","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/3.jpg","time":"20\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u5fb7\u9053\u6210\u4ed9","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/2.jpg","time":"23\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u66f9\u5fe0\u82b3","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/1.jpg","time":"16\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u963f\u8428\u5fb7","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/20.jpg","time":"3\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u7b2c\u5341\u56db","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/19.jpg","time":"50\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u8f85\u5bfc\u8d39","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/18.jpg","time":"24\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u9053\u5929","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/17.jpg","time":"5\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"L\u560e\u560e","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/16.jpg","time":"28\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u4e0a\u5e02\u53f8","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/15.jpg","time":"18\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u5fb7\u8f85\u9053","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/14.jpg","time":"29\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u5341\u6cd5\u5e08\u00b0","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/13.jpg","time":"20\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u6211\u4e0d\u662f\u7fa4\u4e3b","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/12.jpg","time":"23\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u83f2\u5fb7\u5c14","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/11.jpg","time":"16\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u7487\u5e7f\u7487","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/30.jpg","time":"8\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u5c0f\u84dd","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/29.jpg","time":"50\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u53cd\u5bf9\u6cd5","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/28.jpg","time":"24\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"A\u5927\u5e45\u5ea6\u53d1","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/27.jpg","time":"54\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u653eL\u521a\u521aQ","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/26.jpg","time":"28\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u95ee\u6211","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/25.jpg","time":"18\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u82df\u5bcc","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/24.jpg","time":"29\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u9489nny","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/23.jpg","time":"20\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u8fc7\u51e0","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/22.jpg","time":"23\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false},{"nickname":"\u53d1\u82b3","imgurl":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/message\/21.jpg","time":"16\u79d2\u524d","typeName":"\u626b\u7801","isEdit":false}],"uuid":"4d2f6be9-63ed-4712-bbc6-e162d6909df0","configCode":"MessageConfig","isSelected":true,"configInfo":[],"itemIndex":8,"text":""}],
+            formlist = [],
+            wxfanslist = [{"name":"NjWxfans","desc":"\u5fae\u4fe1\u52a0\u7c89","id_number":11,"icon":"icon-tianjiaweixin","isSeniorCom":true,"currWxcType":2,"currStyleClass":"style-one","currWxStyleClass":"style-one","isExtContent":true,"animate":"","events":[],"styleInfo":[],"text":"<p><span style=\"font-size: 0.14rem; color: rgb(89, 89, 89);\">\u957f\u6309\u590d\u5236\u5fae\u4fe1: <\/span><\/p>","btnText":"<p><span style=\"font-size: 0.14rem; color: rgb(255, 255, 255);\">\u53bb\u5fae\u4fe1\u6dfb\u52a0\u597d\u53cb<\/span><\/p>","hideCom":false,"position":"none","styleIcon":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/fans_icon.png","iconBorderColor":"#000","iconBorderStyle":"none","iconBorderWidth":"1px","iconRadius":"50%","btnBgColor":"#0188FB","btnHeight":"0.26rem","btnWidth":"1.72rem","btnRadius":"0.04rem","styles":{"background":"","backgroundColor":"","backgroundImage":"","bottom":"","position":"","top":"","width":"100%","zIndex":0,"left":0},"boxBg":{"background":"","backgroundImage":"","backgroundColor":"#F2F2F2","backgroundRepeat":"repeat","backgroundSize":"100%","bgMode":false,"opacity":1},"font":{"backgroundColor":"#fdff57","color":"#595959","fontSize":".14rem","fontWeight":"normal"},"eboxValue":{"fontSize":14,"iconRadius":50,"opacity":100,"backgroundSize":100,"btnHeight":26,"btnWidth":172,"btnRadius":4,"typeKey":1,"typelist":[{"key":1,"name":"\u5e73\u94fa","isSelected":true},{"key":2,"name":"\u62c9\u4f38","isSelected":false}]},"styleTypeMap":{"styleOne":{"key":"style-one","name":"\u98ce\u683c1","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/fans1.png","isSelected":true,"eleStylInfo":{"borderRadius":50,"text":"<p><span style=\"font-size: 0.14rem; color: rgb(89, 89, 89);\">\u957f\u6309\u590d\u5236\u5fae\u4fe1: <\/span><\/p>","btnText":"<p><span style=\"font-size: 0.14rem; color: rgb(255, 255, 255);\">\u53bb\u5fae\u4fe1\u6dfb\u52a0\u597d\u53cb<\/span><\/p>"}},"styleTwo":{"key":"style-two","name":"\u98ce\u683c2","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/fans2.png","isSelected":false,"eleStylInfo":{"borderRadius":20,"text":"<p><span style=\"font-size: 0.14rem; color: rgb(89, 89, 89);\">\u6dfb\u52a0\u5fae\u4fe1: <\/span><\/p>","btnText":"<p><span style=\"font-size: 0.14rem;color: rgb(89, 89, 89);\">(\u2191\u70b9\u51fb\u590d\u5236\u5e76\u53bb\u5fae\u4fe1\u52a0\u597d\u53cb)<\/span><\/p>"}},"styleThree":{"key":"style-three","name":"\u98ce\u683c3","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/fans3.png","isSelected":false,"eleStylInfo":{"borderRadius":0,"text":"<p><span style=\"font-size: 0.14rem; color: rgb(89, 89, 89);\">\u957f\u6309\u590d\u5236\u5fae\u4fe1: <\/span><\/p>","btnText":"<p><span style=\"font-size: 0.14rem; color: rgb(255, 255, 255);\">\u6253\u5f00\u5fae\u4fe1\u52a0\u597d\u53cb<\/span><\/p>"}},"styleFour":{"key":"style-four","name":"\u98ce\u683c4","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/fans4.png","isSelected":false,"eleStylInfo":{"borderRadius":0,"text":""}},"styleFive":{"key":"style-five","name":"\u98ce\u683c5","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/fans5.png","isSelected":false,"eleStylInfo":{"borderRadius":0,"btnText":"<p><span style=\"font-size: 0.14rem; color: rgb(255, 255, 255);\">\u6253\u5f00\u5fae\u4fe1\u52a0\u597d\u53cb<\/span><\/p>"}}},"wxStyleTypeMap":{"styleOne":{"key":"style-one","name":"\u98ce\u683c1","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/wxasi1.jpg","isSelected":true,"eleStylInfo":{"borderRadius":50,"text":"<p><span style=\"font-size: 0.14rem; color: rgb(89, 89, 89);\">\u957f\u6309\u590d\u5236\u5fae\u4fe1: <\/span><\/p>","btnText":"<p><span style=\"font-size: 0.14rem; color: rgb(255, 255, 255);\">\u53bb\u5fae\u4fe1\u6dfb\u52a0\u597d\u53cb<\/span><\/p>"}},"styleTwo":{"key":"style-two","name":"\u98ce\u683c2","value":"https:\/\/oss.jfb.qidianbox.com\/assets\/h5\/wxasi2.png","isSelected":false,"eleStylInfo":{"borderRadius":50,"text":"<p><span style=\"font-size: 0.14rem; color: rgb(89, 89, 89);\">\u957f\u6309\u590d\u5236\u5fae\u4fe1: <\/span><\/p>","btnText":"<p><span style=\"font-size: 0.14rem; color: rgb(255, 255, 255);\">\u53bb\u5fae\u4fe1\u6dfb\u52a0\u597d\u53cb<\/span><\/p>"}}},"uuid":"634b515b-30ce-4265-9f64-1d2e606e0b23","configCode":"WxfansConfig","isSelected":false,"configInfo":[],"itemIndex":4}],
+            buttonlist=[],
+            baseUrl = "e10k.nanhongyu.top",
+            log_id = "41869640",
+            sign = "2HYUj3",
+            encry = "7c100c24"
+
+
+</script>
+<!--视频0-->
+
+<!--表单0-->
+<!--地址0-->
+<!--select选择框 0-->
+<!--时间0-->
+<!--地址js-->
+
+
+<!--视频和轮播图样式以及js0-->
+
+<!--<script type="text/javascript" src="static/js/video.min.js"></script>
+<script src="static/js/videojs-contrib-hls.min.js"></script>-->
+<script src="static/js/rrweb.min.js"></script>
+<script src="static/js/aliyun-oss-sdk-6.1.1.min.js"></script>
+<!--<script src="static/js/city.js"></script>
+<script type="text/javascript" src="static/js/ft-carousel.min.js"></script>-->
+<script type="text/javascript" src="static/js/basics.js"></script>
+<!--<script type="text/javascript" src="static/js/follow.js"></script>
+<script type="text/javascript" src="static/js/select.js"></script>
+<script type="text/javascript" src="static/js/datetime.js"></script>
+<script type="text/javascript" src="static/js/zdcascader.js"></script>-->
+<script type="text/javascript" src="static/js/jquery.lazyload.min.js"></script>
+
+<script type="text/javascript">
+    window.onload = function() {
+        // 阻止双击放大
+        var lastTouchEnd = 0;
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) { event.preventDefault(); }
+        });
+        document.addEventListener('touchend', function(event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) { event.preventDefault(); }
+            lastTouchEnd = now;
+        }, false);
+        // 阻止双指放大
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault();
+        });
+    }
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+        var
+            siteName = '御丰冠佛跳墙',
+            openid = parseQueryStr('openid') || null,
+
+            html = '',
+            generalizeId = "",
+            wxMiniUrl = "",
+            isConfrimeFLag = true,
+            isEnbleCopy = true,
+            isBodule = false,
+            recodePressNum = 0,
+            isConRecording = false,
+            ua = navigator.userAgent.toLowerCase(),
+            isWeixin = ua.indexOf('micromessenger') != -1,
+            isMobile = navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i),
+            isBaidu = ua.indexOf('baiduboxapp') != -1,
+            isUC = ua.indexOf('ucbrowser') != -1,
+            isIOS = !!ua.match(/(iPhone|iPod|ios|iOS|iPad)/i);
+
+        document.title = siteName;
+        if(baseUrl == '')
+        {
+            baseUrl = window.location.origin;
+        }else{
+            baseUrl = '//' + baseUrl;
+        }
+
+        function parseQueryStr(key) {
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+
+        /*轮播图*/
+        for (i in carouseslist) {
+            let itmI = carouseslist[i].itemIndex;
+            $("#carousel_" + itmI).FtCarousel({
+                auto: carouseslist[i].autoplay,
+                time: carouseslist[i].waitTime * 1000 || 3000,//自动播放间隔
+                index: 0, // 初始索引
+                indicators: true, // 是否显示指示按钮
+                buttons: true, // 是否显示左右切换按钮
+            });
+        }
+        /* 图片 */
+        for (i in imageslist) {
+            let itmI = imageslist[i].itemIndex;
+            let ilist = imageslist[i];
+            // ilist.configInfo.linkType == 'srcByLinkMini' || ilist.configInfo.linkType == 'srcByLink'
+            if (ilist.configInfo.linkType == 'srcByLinkWx' &&  isWeixin ) {
+                // longpress('.image-link'+itmI)
+            } else {
+                if (['srcByLink', 'srcByLinkMini'].includes(ilist.configInfo.linkType)) {
+                    document.querySelector('.image-link' + itmI).addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        if (ilist.configInfo.linkType == 'srcByLink' && ilist.configInfo.srcByLink) {
+                            window.location.href = ilist.configInfo.srcByLink
+                            return;
+                        }
+
+                        if (ilist.configInfo.linkType == 'srcByLinkMini' && ua.indexOf('miniprogram') == -1) {
+                            reqFormat(1, 'jump')
+                        }
+                    }, true)
+                }
+
+            }
+
+            // if (isWeixin) {
+            //     if (!!ua.match(/iphone/)) longpress(`.image-holder${itmI}`)
+            // }
+        }
+
+        let imgls = document.querySelectorAll('.img-lazyload');
+        for (let i = 0; i < imgls.length; i++) {
+            if (i < 3) {
+                imgls[i].classList.remove("lazy");
+                let src = imgls[i].getAttribute('data-original');
+                imgls[i].setAttribute('src', src);
+            } else {
+                break;
+            }
+        }
+
+        for (i in videolist) {
+            let itmI = videolist[i].itemIndex;
+            let list = videolist[i];
+            $('.vjsPlay'+itmI).on('click', function() {
+                $(`.videoPreview${itmI}`).removeAttr('style');
+                $(`.videoPreview${itmI} .nostart`).remove();
+                $(`.videoPreview${itmI}`).append(`<video class="video-js vjs-default-skin" id="videojs${itmI}" webkit-playsinline
+                    playsinline
+                    x5-playsinline
+                    x-webkit-airplay="allow"
+                    preload
+                    controls
+                    autoplay></video>`);
+
+                initVideo(i,list );
+
+            })
+        }
+
+        function initVideo(i, data) {
+            let vjs = videojs(document.querySelector("#videojs"+data.itemIndex), {
+                autoplay: data.video_fields.autoPlay, // 如果true,浏览器准备好时开始回放。
+                muted: data.video_fields.isMuted, // 默认情况下将会消除任何音频。
+                loop: data.video_fields.loop, // 导致视频一结束就重新开始。
+                preload: "auto", // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
+                language: "zh-CN",
+                aspectRatio: "16:9", // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）
+                fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
+                sources: [
+                    {
+                        type: data.configInfo.srcByUploadVideo.includes("m3u8") ?
+                            "application/x-mpegURL" :
+                            "video/mp4", // 这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+                        src: data.configInfo.srcByUploadVideo // url地址
+                    }
+                ],
+                hls: true,
+                poster: data.configInfo.srcByUpload, // 你的封面地址
+                notSupportedMessage: "此视频暂无法播放，请稍后再试", // 允许覆盖Video.js无法播放媒体源时显示的默认信息。
+                controlBar: {
+                    timeDivider: true,
+                    durationDisplay: true,
+                    remainingTimeDisplay: data.video_fields.showTime,
+                    fullscreenToggle: true // 全屏按钮
+                }
+            });
+            vjs.play();
+        }
+
+        /* 阅读 */
+        for (i in readingslist) {
+            let itmI = readingslist[i].itemIndex;
+            $('.zankan' + itmI).on('click', function () {
+                let color = $(this).css('color');
+                let eleh = $(this).children('.see');
+                if (color == '#576b95' || color == 'rgb(87, 107, 149)') {
+                    $(this).css('color', '#ffc300');
+                    eleh.text(parseInt(eleh.text()) + 1)
+                } else {
+                    $(this).css('color', '#576b95');
+                    eleh.text(parseInt(eleh.text()) - 1)
+                }
+            });
+        }
+        /*悬浮组件*/
+        for (i in consultlist) {
+            let itmI = consultlist[i].itemIndex;
+            let fobj = consultlist[i]
+            if (fobj && fobj.boxBg.backgroundImage) {
+                document.querySelector('.akcont .bgimg').src = fobj.boxBg.backgroundImage
+            }
+        }
+
+        /*底部悬浮*/
+        function reqFormat(type, jump) {
+            if (wxMiniUrl) window.location.href = wxMiniUrl;
+            isEnbleCopy = false;
+            let custb = window.jQuery.custb || {}
+            if (custb.configure_type == 4) {
+                if (isWeixin && type) {
+                    $('.weixqr').fadeIn(300);
+                    return;
+                }
+                let elelist = document.querySelectorAll('.wechat_number')
+                copyw(elelist[0])
+            }
+            let t = custb.configure_type != 4 ? jump : null;
+            setTimeout(function() {
+                straght();
+                backpass(1, t);
+                save();
+            }, 16.6666666)
+        }
+
+        function cutUrl (url) {
+            if (!url) return '';
+            if (url.indexOf('http://') == 0) return url.slice(5)
+            if (url.indexOf('https://') == 0) return url.slice(6)
+        }
+
+        for (i in suspensionlist) {
+            longpress(`.wechat_qrcode${suspensionlist[i].itemIndex}`)
+        }
+        let ticker = {
+            timer: null,
+            second: isNaN(sessionStorage.getItem('TTstorage')) ? 0 : sessionStorage.getItem('TTstorage'),
+            start: function () {
+                ticker.running();
+            },
+            stop: function () {
+                clearInterval(ticker.timer);
+            },
+            end_session: function (logId, group) {
+                let reurl = baseUrl + '/set_time';
+                let time = ticker.second * 1000;
+                let params = {sign: sign, log_id: logId, time: time, customer_service_id: group};
+                if (ticker.second) {
+                    $.ajax({
+                        type: 'post', url: reurl, dataType: 'json', data: params, async: false,
+                        success: function (resp) {
+                            sessionStorage.removeItem('TTstorage')
+                            ticker.second = 0;
+                            ticker.timer = null;
+                            ticker.stop();
+                        }
+                    });
+                }
+            },
+            running: function () {
+                ticker.timer = setInterval(() => {
+                    ticker.second++;
+                    sessionStorage.setItem('TTstorage', ticker.second);
+                }, 1000);
+            }
+        };
+
+        $(window).Hrrweb({baseUrl, sign, log_id, openid});
+        ticker.start();
+        eventsBind();
+
+
+        function eventsBind() {
+            let i = this,
+                sf = 1,
+                n = $('.wechat_number'),
+                e = $('.dialog__btn_default'),
+                a = $('.dialog__btn_primary'),
+                ie = $('.input-dialog__btn_default'),
+                ia = $('.input-dialog__btn_primary'),
+                d = $(document),
+                b = $('.wechat_btn');
+
+            if (isBaidu) {
+                n.on('click', function () {
+                    reqFormat(null, 'jump');
+                });
+            } else if (ua.indexOf('mqqbrowser') >= 0) {
+                for (i in wxfanslist) {
+                    longpress(`.wechat_number${wxfanslist[i].itemIndex}`)
+                }
+            } else {
+                n.on('copy', function () {
+                    if (sf == 9) {
+                        $('.starit_dialog').css('display', 'block');
+                    } else {
+                        if (!isEnbleCopy) return;
+                        reqFormat()
+                    }
+                    if ((/safari/.test(ua) && !/chrome/.test(ua))) sf = 9;
+                });
+            }
+            b.on('click', function (evt) {
+                // copyw(n[0]);
+                // if (isBaidu) straght();
+                reqFormat(null, 'jump')
+            })
+            e.on('click', function () {
+                $('.starit_dialog').css('display', 'none');
+            }), ie.on('click', function () {
+                $('.dialog_input').css('display', 'none');
+            }), a.on('click', function () {
+                backpass(1);
+                straght();
+                $('.starit_dialog').css('display', 'none');
+                save();
+            }), ia.on('click', function () {
+                let username = $('#input_username').val();
+                let phone = $('#input_phone').val();
+                let reg = /^1[3456789]\d{9}$/;
+                if (!(username && phone)) {
+                    alert('请完善您的信息');
+                    return;
+                }
+                if (!reg.test(phone)) {
+                    alert('请输入正确的手机号格式');
+                    return;
+                }
+                let url = baseUrl + '/authorize_h5';
+                let params = { t: sign, customer_id: window.jQuery.c_id, type: 4, id: log_id, name: username, phone }
+                $.ajax({type: 'POST',url, data: params, dataType: 'json',
+                    complete: function(resp) {
+                        if (resp.status == 200) {
+                            $('.dialog_input').css('display', 'none');
+                            alert('我们已收到您的反馈，专属客服稍后会联系您');
+                        } else {
+                            alert('提交信息失败，请重试！');
+                        }
+                    }
+                })
+            }), d.on('visibilitychange', function () {
+                if (document.visibilityState === 'hidden') {
+                    isConfrimeFLag = true
+                    ticker.stop();
+                } else {
+                    ticker.start();
+                }
+            }), $(window).on('beforeunload', function () {
+                if (isConfrimeFLag) ticker.end_session(log_id, window.jQuery.customer_service_id);
+            })
+        }
+        $.ajax({type: 'GET',url: baseUrl+`/renewal`, dataType: 'json', success: function(resp) {}})
+        function straght () {
+            if (wxMiniUrl) {
+                strgJump()
+            } else {
+                let i = this,
+                    clickid = parseQueryStr('clickid') ||
+                        parseQueryStr('qa_gdt') ||
+                        parseQueryStr('click_id') ||
+                        parseQueryStr('gdt_vid') ||
+                        parseQueryStr('bd_vid');
+
+                let jumpurl = baseUrl+`/straight?sign=${sign}&click_id=${clickid}&customer_service_id=${window.jQuery.customer_service_id}&log_id=${log_id}&type=4`;
+                $.ajax({type: 'GET',url: jumpurl, dataType: 'json',
+                    success: function(resp) {
+                        if (resp.code == 200 && resp.data.openlink) {
+                            wxMiniUrl = resp.data.openlink;
+                            strgJump('ext')
+                        }
+                    },
+                    fail: function(err) { alert('请求接口报错');},
+                    complete: function(resp) {
+                        if (resp.status == 500) alert('请求接口报错');
+                    }
+                })
+            }
+        }
+        function strgJump (typ) {
+            isConfrimeFLag = false;
+            ticker.end_session(log_id, window.jQuery.customer_service_id);
+            if(typ) window.location.href = wxMiniUrl;
+            if (isUC) {
+                $('.ucTips').fadeIn(300);
+                clearTimeout(tipTimer);
+                tipTimer = setTimeout(timerHiddenUcTips, 5 * 1000);
+            }
+            if (!(/safari/.test(ua) && !/chrome/.test(ua))) isEnbleCopy = true;
+        }
+        function timerHiddenUcTips () {
+            $('.ucTips').fadeOut(500);
+        }
+        // 1=复制，2=跳转，3=长按，4=加粉
+        function backpass (type, jump) {
+            let i = this,
+                params = {type: type, log_id: log_id, generalize_id: generalizeId},
+                reurl = baseUrl + (jump ? '/jump_click' : '/back_pass_api');
+            $.ajax({
+                type: 'POST', url: reurl, dataType: 'JSON', data: params,
+                success: function(resp) {
+                    if (resp.code == 200) generalizeId = resp.data.generalize_id
+                }
+            })
+        }
+
+        function copyw(ele) {
+            try {
+                const range = document.createRange();
+                range.selectNode(ele);
+                const selection = window.getSelection();
+                if (selection.rangeCount > 0) selection.removeAllRanges();
+                selection.addRange(range);
+                document.execCommand('copy');
+                selection.removeAllRanges();
+                // if (!isBaidu) straght();
+                isEnbleCopy = true;
+            } catch (e) {
+                console.log('复制失败');
+            }
+        }
+
+        function longpress(ele) {
+            let i = this;
+            let timeOutEvent = 0; // 用来设置定时器，且 0 数值用于后续判断 wechat_qrcode
+            let wximg = document.querySelector(ele);
+            // let btn = document.querySelector('.consult-zixun');
+            if (wximg || ele.indexOf('wechat_number') >= 0) {
+                if(!wximg) return;
+                $(ele).on('touchstart', function (e) {
+                    // e.preventDefault();
+                    // e.stopPropagation();
+                    // 当开始触摸的时候定时器计时
+                    timeOutEvent = setTimeout(function () {
+                        timeOutEvent = 0;
+                        console.log('你长按了');
+                        if (isWeixin) {
+                            recodePressNum += 1;
+                            if (recodePressNum % 5 == 0) {
+                                $('.dialog_input').css('display', 'block');
+                            }
+                        }
+                        if (ele.indexOf('wechat_number') >= 0) {
+                            copyw($(ele)[0])
+                            $('.starit_dialog').css('display', 'block');
+                        } else {
+                            backpass(1);
+                        }
+                        save();
+                    }, 600); // 达到 1s 就会实现长按效果
+                })
+                $(ele).on('touchmove', function (e) {
+                    // 如果触摸未达到 1s 且开始移动，则清除计时器
+                    clearTimeout(timeOutEvent);
+                    timeOutEvent = 0;
+                })
+                $(ele).on('touchend', function (e) {
+                    // 如果触摸未达到 1s 且离开屏幕，则清除计时器
+                    clearTimeout(timeOutEvent);
+                    if (timeOutEvent !== 0) {
+                        // 判断是否发生长按
+                        console.log('你这是点击，不是长按');
+                    }
+                    return false;
+                })
+            }
+        }
+
+        /*评论*/
+        for (i in commentslist) {
+            let itmI = commentslist[i].itemIndex;
+            let oflag = commentslist[i].currStyleClass == 'style-one';
+            let tflag = commentslist[i].currStyleClass == 'style-two';
+            let commentlist = commentslist[i].commentlist
+            $(".linkes" + itmI).on('click', function () {
+                let index = $(this).attr('data-linkIndex') || 1;
+                index = parseInt(index) - 1;
+                let list = commentlist[index];
+                if (!list.isZan) {
+                    list.zanInputNum += 1;
+                    list.isZan = true;
+                    if (oflag) $(this).children('.zan').addClass('icon-dianzanxuanzhong').removeClass('icon-dianzan');
+                    if (tflag) $(this).css('color', '#f56c6c');
+                } else {
+                    list.zanInputNum -= 1;
+                    list.isZan = false;
+                    if (oflag) $(this).children('.zan').addClass('icon-dianzan').removeClass('icon-dianzanxuanzhong');
+                    if (tflag) $(this).css('color', '#595959');
+                }
+                let result = null
+                if (oflag) result = list.zanInputNum < 1000 ? list.zanInputNum + '' : parseFloat((list.zanInputNum / 1000).toString().match(/^\d+(?:\.\d{0,1})?/)) + 'K';
+                if (tflag) result = list.zanInputNum;
+
+                $(this).children('.lnk').text(result);
+            })
+
+
+            for (t in commentlist) {
+                let  n=parseInt(t)+1;
+                let replylist = commentlist[t] && commentlist[t].replylist || [];
+                $(".likesp" + itmI + n).on('click', function () {
+                    let index = $(this).attr('data-linkIndex') || 1;
+                    index = parseInt(index) - 1;
+                    let list = replylist[index];
+                    if (!list.isZan) {
+                        list.zanInputNum += 1;
+                        list.isZan = true;
+                        if (oflag) $(this).children('.zan').addClass('icon-dianzanxuanzhong').removeClass('icon-dianzan');
+                        if (tflag) $(this).css('color', '#f56c6c');
+                    } else {
+                        list.zanInputNum -= 1;
+                        list.isZan = false;
+                        if (oflag) $(this).children('.zan').addClass('icon-dianzan').removeClass('icon-dianzanxuanzhong');
+                        if (tflag) $(this).css('color', '#595959');
+                    }
+                    let result = null
+                    if (oflag) result = list.zanInputNum < 1000 ? list.zanInputNum + '' : parseFloat((list.zanInputNum / 1000).toString().match(/^\d+(?:\.\d{0,1})?/)) + 'K';
+                    if (tflag) result = list.zanInputNum;
+                    $(this).children('.lnk').text(result);
+                })
+            }
+        }
+
+        /* 关闭协议弹框 表单点击 */
+        $('.default-close-btn').on('click', function (e) {
+            $('.default-modal').fadeOut(300);
+            e.stopPropagation();
+        });
+        $('.privacy_box').on('click', function (event) {
+            var evt = event.srcElement ? event.srcElement : event.target;
+            if (evt.className == 'dialog-wrapper') $('.default-modal').fadeOut(300);
+        });
+        /* 打开立即咨询弹框 */
+        $('.zxunbtn').on('click', function () {
+            if (isWeixin) {
+                $('.weixqr').fadeIn(300);
+            } else {
+                reqFormat(null, 'jump')
+            }
+        });
+        /* 关闭立即咨询弹框 */
+        $('.weixqr').on('click', function (evt) {
+            var evt = event.srcElement ? event.srcElement : event.target;
+            if (evt.className == 'alert-bg' || evt.className == 'errClose') $(this).fadeOut(300);
+        });
+        $('.inputErrClose').on('click', function (evt) {
+          $('.dialog_input').css('display', 'none');
+        });
+        if (isIOS) {
+            let isReset;
+            $('body').focusout(()=>{
+                isReset = true;
+                setTimeout(() => {
+                    if (isReset) window.scroll(0, 0);
+                }, 100);
+            }).focusin(()=>{
+                isReset = false;
+            })
+        }
+        /* 表单提交弹框 */
+        $('.alert-btn').on('click', function (e) {
+            $('.alert-wrap').fadeOut(300);
+            e.stopPropagation();
+        })
+        $('.alert-wrap').on('click', function (event) {
+            var evt = event.srcElement ? event.srcElement : event.target;
+            if (evt.className.includes('alert-mask')) $(this).fadeOut(300);
+        })
+
+        /*消息*/
+        for (i in messageslist) {
+            autoPlay(messageslist[i])
+        }
+
+        function autoPlay(tl) {
+            let that = this;
+            let dm_json = tl.messageList;
+            let dm_index = 0;
+            let msgobj = {};
+            if (typeof danmuTimer != 'undefined') clearInterval(danmuTimer)
+            danmuTimer = setInterval(() => {
+                msgobj = dm_json[dm_index]
+                if (msgobj.nickname) msgobj.isSelected = true
+                if (dm_index == dm_json.length - 1) {
+                    dm_index = 0;
+                } else {
+                    dm_index++;
+                }
+                let html = `<span class="fui-danmu animated ${msgobj && msgobj.isSelected ? 'fadeInUp' : ''}" id="njmessage${tl.itemIndex}">
+	                        <img draggable="false" class="thumb" src="static/picture/${msgobj.imgurl}">
+	                        <div class="text">${msgobj.nickname} ${msgobj.time} 扫码添加了微信</div>
+	                        <div class="time"></div>
+	                    </span>`;
+                $(`.message-holder${tl.itemIndex}`).html(html)
+                setTimeout(() => {
+                    if (msgobj.nickname) {
+                        msgobj.isSelected = false
+                        if ($(`.message-holder${tl.itemIndex}`)) $(`#njmessage${tl.itemIndex}`).remove()
+                        msgobj = {}
+                    }
+                }, 2000);
+            }, 5000);
+        }
+
+        //form表单
+        /*城市选择器*/
+        let citysJ = window.cityJson || []
+        let city_maps = []
+        let citylist = JSON.parse(JSON.stringify(citysJ))
+        citylist.forEach(v => {
+            let maps_chl = []
+            v.children.forEach(item => {
+                if (item.children) delete item.children
+                maps_chl.push(item)
+            })
+            v.children = maps_chl
+            city_maps.push(v)
+        })
+        for (i in formlist) {
+            let itmI = formlist[i].itemIndex;
+            let fobj = formlist[i];
+            //fobj.form_fields.allow = false;
+            $(".allowIcon" + itmI).on('click', function () {
+                if (fobj.form_fields.allow) {
+                    fobj.form_fields.allow = false
+                    $(this).removeClass('selected')
+                    // $('.submitbtn'+itmI).addClass('disagree')
+                } else {
+                    fobj.form_fields.allow = true
+                    $(this).addClass('selected')
+                    // $('.submitbtn'+itmI).removeClass('disagree')
+                }
+            });
+            $('.agrLink' + itmI).on('click', function () {
+                $('.default-modal').fadeIn(300);
+            });
+            $(`input[name=username${itmI}]`).on('input', function () {
+                let ut = $(`.error-username${itmI}`).css('display');
+                if ($(this).val() && ut == 'block') {
+                    $(`.error-username${itmI}`).css('display', 'none');
+                }
+            })
+            $(`input[name=phone${itmI}]`).on('input', function () {
+                let reg = /^1[3456789]\d{9}$/;
+                let ut = $(`.error-phone${itmI}`).css('display');
+                if (reg.test($(this).val()) && ut == 'block') {
+                    $(`.error-phone${itmI}`).css('display', 'none');
+                }
+            })
+            if (fobj.form_fields.elelist && fobj.form_fields.elelist.length) {
+                fobj.form_fields.elelist.forEach((v, i) => {
+                    i = i + 1;
+                    if ('cityOne' == v.key || 'cityTwo' == v.key) {
+                        let list = 'cityTwo' == v.key ? citysJ : city_maps;
+                        $(`#${v.key}${itmI}${i}`).zdCascader({data: list});
+                    }
+                    // if ('inputNumber' == v.key) {
+                    //     $(`input[name=${v.key}${itmI}${i}]`).val(v.values)
+                    //     $(`input[name=${v.key}${itmI}${i}]`).on('input', function (e) {
+                    //         let vls = $(this).val()
+                    //         if (vls.length > 10) $(this).val(vls.slice(0, 10))
+                    //     })
+                    // }
+                    if ('inputNumber' == v.key) $(`input[name=${v.key}${itmI}${i}]`).val(v.values)
+                })
+            }
+            $('.submitbtn' + itmI).on('click', function () {
+                let isVerify = fobj.form_fields.id && fobj.form_fields.elelist && fobj.form_fields.elelist.length
+                if (isVerify) {
+                    fobj.form_fields.elelist.forEach((v, i) => {
+                        i = i + 1;
+                        v.form_value = "";
+                        if (['username', 'phone', 'email', 'text', 'inputNumber', 'date'].includes(v.key)) {
+                            v.form_value = $(`input[name=${v.key}${itmI}${i}]`).val();
+                        }
+                        if (['gender'].includes(v.key)) {
+                            if ($(`#gender1${itmI}${i}`)[0].checked) v.form_value = $(`#gender1${itmI}${i}`).val();
+                            if ($(`#gender2${itmI}${i}`)[0].checked) v.form_value = $(`#gender2${itmI}${i}`).val();
+                        }
+                        if (['textarea'].includes(v.key)) {
+                            v.form_value = $(`textarea[name=${v.key}${itmI}${i}]`).val();
+                        }
+                        if (['select'].includes(v.key)) {
+                            v.form_value = $(`#form_select${itmI}${i}`).val();
+                            let obj = v.subs.find(t => v.form_value == t.kId);
+                            if (obj) v.form_vlu = obj.title;
+                        }
+                        if (['radio'].includes(v.key)) {
+                            v.subs.forEach((r, ri) => {
+                                ri = ri + 1;
+                                if ($(`#radios${itmI}${i}${ri}`)[0] && $(`#radios${itmI}${i}${ri}`)[0].checked) {
+                                    v.form_value = $(`#radios${itmI}${i}${ri}`).val();
+                                    v.form_vlu = r.title;
+                                }
+                            })
+                        }
+                        if (['checkout'].includes(v.key)) {
+                            v.form_value = [];
+                            v.form_vlu = [];
+                            v.subs.forEach((r, ri) => {
+                                ri = ri + 1;
+                                if ($(`#checkbox${itmI}${i}${ri}`)[0] && $(`#checkbox${itmI}${i}${ri}`)[0].checked) {
+                                    v.form_value.push($(`#checkbox${itmI}${i}${ri}`).val());
+                                    v.form_vlu.push(r.title);
+                                }
+                            })
+                        }
+                        if (['cityOne', 'cityTwo'].includes(v.key)) {
+                            v.form_value = $(`#${v.key}${itmI}${i}`).val();
+                        }
+                        // getCheckedNodes
+                        let vals = null
+                        if (['checkout'].includes(v.key)) {
+                            if (v.must) vals = v.form_value.length ? 'none' : 'block';
+                        } else if ('phone' == v.key) {
+                            let reg = /^1[3456789]\d{9}$/;
+                            let txt = v.title + '格式不正确';
+                            if (v.must && !v.form_value) {
+                                txt = v.title + '不能为空';
+                                vals = 'block';
+                            } else {
+                                vals = reg.test(v.form_value) || !v.form_value ? 'none' : 'block';
+                            }
+                            $(`.error${v.key}${itmI}${i}`).text(txt);
+                        } else if ('email' == v.key) {
+                            let reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[\w-]+(\.[\w-]+)+$/;
+                            let txt = v.title + '格式不正确';
+                            if (v.must && !v.form_value) {
+                                txt = v.title + '不能为空';
+                                vals = 'block';
+                            } else {
+                                vals = reg.test(v.form_value) || !v.form_value ? 'none' : 'block';
+                            }
+                            $(`.error${v.key}${itmI}${i}`).text(txt);
+                            // if (v.must) vals = reg.test(v.form_value) ? 'none' : 'block'
+                        } else {
+                            if (v.must) vals = v.form_value ? 'none' : 'block';
+                        }
+                        $(`.error${v.key}${itmI}${i}`).css('display', vals)
+                        if (['phone', 'email'].includes(v.key)) {
+                            v.verify = vals == 'none' || (!v.must && !v.form_value) ? true : false;
+                        } else {
+                            v.verify = vals == 'none' || !v.must ? true : false;
+                        }
+                    })
+                }
+                if (!fobj.form_fields.allow) {
+                    alert('请阅读并同意《个人信息保护声明》');
+                    return;
+                }
+                // if (fobj.form_fields.allow) {
+                let params = {t: sign, customer_id: window.jQuery.c_id, type: 4, id: log_id}
+                let url = baseUrl + '/authorize_h5';
+                if (isVerify) {
+                    let everyFlag = fobj.form_fields.elelist.every(v => v.verify);
+                    if (!everyFlag) return;
+                    let username = fobj.form_fields.elelist.find(v => 'username' == v.key);
+                    let phone = fobj.form_fields.elelist.find(v => 'phone' == v.key);
+                    params.name = username ? username.form_value : null;
+                    params.phone = phone ? phone.form_value : null;
+                    params.extra_data = fobj.form_fields.elelist;
+                } else {
+                    let reg = /^1[3456789]\d{9}$/;
+                    let username = $(`input[name=username${itmI}]`).val();
+                    let phone = $(`input[name=phone${itmI}]`).val();
+                    let uflag = username ? true : false;
+                    let pflag = reg.test(phone) ? true : false;
+                    if (username) {
+                        $(`.error-username${itmI}`).css('display', 'none');
+                    } else {
+                        $(`.error-username${itmI}`).css('display', 'block');
+                    }
+                    if (reg.test(phone)) {
+                        $(`.error-phone${itmI}`).css('display', 'none');
+                    } else {
+                        $(`.error-phone${itmI}`).css('display', 'block');
+                    }
+                    if (!(uflag && pflag)) return;
+                    params.name = username;
+                    params.phone = phone;
+                }
+                $.post(url, params, function (resp) {
+                    if (resp && resp.code == 200) {
+                        $('.alert-text-wrap .alert-text').text(fobj.form_fields.tipValue);
+                        $('.alert-icon').removeClass('error alert-icon-error');
+                        $('.alert-icon').addClass('success alert-icon-success');
+                        $('.alert-wrap').fadeIn(300);
+                        if (isVerify) {
+
+                        } else {
+                            $(`input[name=username${itmI}]`).val('');
+                            $(`input[name=phone${itmI}]`).val('');
+                        }
+                    } else if (resp && resp.code == 2000) {
+                        $('.alert-text-wrap .alert-text').text(resp.msg);
+                        $('.alert-icon').removeClass('success alert-icon-success');
+                        $('.alert-icon').addClass('error alert-icon-error');
+                        $('.alert-wrap').fadeIn(300);
+                    } else {
+                        let classname = $('.alert-icon').attr('class')
+                        if (classname.includes('alert-icon-success')) {
+                            $('.alert-icon').removeClass('success alert-icon-success');
+                            $('.alert-icon').addClass('error alert-icon-error');
+                        }
+                        $('.alert-text-wrap .alert-text').text('提交信息失败，请重试！');
+                        $('.alert-wrap').fadeIn(300);
+                    }
+                }).error(function () {
+                    let classname = $('.alert-icon').attr('class')
+                    if (classname.includes('alert-icon-success')) {
+                        $('.alert-icon').removeClass('success alert-icon-success');
+                        $('.alert-icon').addClass('error alert-icon-error');
+                    }
+                    $('.alert-text-wrap .alert-text').text('提交信息失败，请重试！');
+                    $('.alert-wrap').fadeIn(300);
+                })
+
+
+                // }
+            });
+        }
+        //微信加粉
+        longpress('.akcont');
+        for (i in wxfanslist) {
+            longpress(`.wechat_qrcode${wxfanslist[i].itemIndex}`);
+        }
+        if (!isMobile) {
+            $('body').css('background-color', '#e8e8e8')
+        }
+        let heightList = []
+        $('.nj-element-box').each(function(e) {
+            if ($(this).css('position') == 'fixed') {
+                heightList.push(parseInt($(this).height()))
+            }
+        })
+        if (heightList.length) {
+            let maxPad = Math.max.apply(null,heightList) || 0
+            if (maxPad > 40) $("#app").css('padding-bottom', maxPad+'px');
+        }
+
+        if (isUC) {
+            var tipTimer = null;
+            $('.ucTips .tips-bg').on('click', function(e) {
+                let styl = $('.ucTips').css('display');
+                if (styl == 'block') $('.ucTips').fadeOut(300);
+                cleatTimeout(tipTimer);
+            })
+        }
+
+        // 懒加载
+        $("img.lazy").lazyload(isMobile ? {} : {container: $("#mobileView")});
+
+        // 录屏 每 10 秒调用一次 save 方法，避免请求过多
+        let rrwebTimer = setTimeout(save, 10 * 1000);
+        // 判断用户是否停留在当前页面 不在当前 页面的就不请求录屏
+        // window 失去焦点，停止输出
+        window.onblur = function () {
+            //    clearInterval(interval_output);
+            clearInterval(rrwebTimer);
+        };
+        var showModalTime = 0;
+        // window 每次获得焦点
+        window.onfocus = function () {
+            rrwebTimer = setInterval(save, 10 * 1000)
+        }
+
+
+        // rrweb行为录制
+        let events = [];
+        let is_upload = 0;
+        rrweb.record({
+            emit(event) {
+                // 用任意方式存储 event
+                // console.log(event);
+                events.push(event);
+                if (event) is_upload = 1;
+            }
+        });
+
+        let saveNum = 0;
+        function save(longPressTime) {
+            try {
+                if(!encry) {
+                    return;
+                }
+            if (!log_id || isConRecording) return;
+            isConRecording = true;
+            saveNum++;
+            if (events.length == 0) return;
+            const body = JSON.stringify({events});
+            var request = new FormData();
+            // let g_object_name
+            // if(saveNum <= 1)
+            // {
+            let g_object_name = 'luping/master/' + encry + '.txt';
+            // }else{
+            //     g_object_name = `luping/master/${log_id}-${saveNum}-append.txt`;
+            // }
+            request.append("key", g_object_name); // 文件名字，可设置路径
+            request.append("success_action_status", '200');// 让服务端返回200,不然，默认会返回204
+            request.append('file', body); // 需要上传的文件 file
+            is_upload = 0;
+
+            let store = new OSS({
+                region: 'oss-cn-beijing',
+                accessKeyId: 'LTAI5tLFbzyVvL9v76QTbJ5z',
+                accessKeySecret: 'YQINuh5Jkwl9oXSGQho6i9OUk1psqL',
+                bucket: 'ad-event',
+                stsToken: ''
+            })
+            // console.log(store, request, g_object_name)
+            store.put(g_object_name, new File([body], 'multipart-upload-file'));
+            //     .then(()=>{
+            //     events = [];
+            // });
+
+            setTimeout(() => isConRecording = false, 1000);
+            } catch(e) {
+
+            }
+        }
+
+    })
+
+</script>
+<script type="text/javascript">
+    //designWidth:设计稿的实际宽度值，需要根据实际设置
+    //maxWidth:制作稿的最大宽度值，需要根据实际设置
+    //这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+    (function (designWidth, maxWidth) {
+        var doc = document,
+            win = window,
+            docEl = doc.documentElement,
+            remStyle = document.createElement("style"),
+            tid;
+        var isMobile = navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i);
+        maxWidth = isMobile ? document.body.clientWidth * 2 : maxWidth;
+
+        function refreshRem() {
+            dcWidth = docEl.clientWidth
+            var width = docEl.getBoundingClientRect().width * 2;
+            maxWidth = maxWidth || 540;
+            width > maxWidth && (width = maxWidth);
+            var rem = width * 100 / designWidth;
+            document.documentElement.style.fontSize = rem + 'px';
+        }
+
+        //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+        refreshRem();
+
+        win.addEventListener("resize", function () {
+            clearTimeout(tid); //防止执行两次
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+
+        win.addEventListener("pageshow", function (e) {
+            if (e.persisted) { // 浏览器后退的时候重新计算
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 300);
+            }
+        }, false);
+    })(750, 750);
+</script>
+                    <script>
+                        // 复制
+                        function fuzhi() {
+                            var wx = document.querySelectorAll('.wx')[0].innerText;
+                            let oInput = document.createElement('input'); //创建一个input
+                            oInput.value = wx;
+                            document.body.appendChild(oInput);
+                            oInput.select(); // 选择对象
+                            document.execCommand("Copy"); // 执行浏览器复制命令
+                            oInput.className = 'oInput';
+                            oInput.style.display = 'none';
+                            alert('复制成功,可粘贴')
+                    
+                            var locatUrl = "weixin://";
+                            window.location.href = locatUrl;
+                        }
+                    </script>
+</body>
+</html>
+
