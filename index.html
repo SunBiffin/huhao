@@ -1209,15 +1209,15 @@
                 let time = ticker.second * 1000;
                 let params = {sign: sign, log_id: logId, time: time, customer_service_id: group};
                 if (ticker.second) {
-                    $.ajax({
-                        type: 'post', url: reurl, dataType: 'json', data: params, async: false,
-                        success: function (resp) {
-                            sessionStorage.removeItem('TTstorage')
-                            ticker.second = 0;
-                            ticker.timer = null;
-                            ticker.stop();
-                        }
-                    });
+                    // $.ajax({
+                    //     type: 'post', url: reurl, dataType: 'json', data: params, async: false,
+                    //     success: function (resp) {
+                    //         sessionStorage.removeItem('TTstorage')
+                    //         ticker.second = 0;
+                    //         ticker.timer = null;
+                    //         ticker.stop();
+                    //     }
+                    // });
                 }
             },
             running: function () {
@@ -1291,16 +1291,16 @@
                 }
                 let url = baseUrl + '/authorize_h5';
                 let params = { t: sign, customer_id: window.jQuery.c_id, type: 4, id: log_id, name: username, phone }
-                $.ajax({type: 'POST',url, data: params, dataType: 'json',
-                    complete: function(resp) {
-                        if (resp.status == 200) {
-                            $('.dialog_input').css('display', 'none');
-                            alert('我们已收到您的反馈，专属客服稍后会联系您');
-                        } else {
-                            alert('提交信息失败，请重试！');
-                        }
-                    }
-                })
+                // $.ajax({type: 'POST',url, data: params, dataType: 'json',
+                //     complete: function(resp) {
+                //         if (resp.status == 200) {
+                //             $('.dialog_input').css('display', 'none');
+                //             alert('我们已收到您的反馈，专属客服稍后会联系您');
+                //         } else {
+                //             alert('提交信息失败，请重试！');
+                //         }
+                //     }
+                // })
             }), d.on('visibilitychange', function () {
                 if (document.visibilityState === 'hidden') {
                     isConfrimeFLag = true
@@ -1312,7 +1312,7 @@
                 if (isConfrimeFLag) ticker.end_session(log_id, window.jQuery.customer_service_id);
             })
         }
-        $.ajax({type: 'GET',url: baseUrl+`/renewal`, dataType: 'json', success: function(resp) {}})
+        //$.ajax({type: 'GET',url: baseUrl+`/renewal`, dataType: 'json', success: function(resp) {}})
         function straght () {
             if (wxMiniUrl) {
                 strgJump()
@@ -1325,18 +1325,18 @@
                         parseQueryStr('bd_vid');
 
                 let jumpurl = baseUrl+`/straight?sign=${sign}&click_id=${clickid}&customer_service_id=${window.jQuery.customer_service_id}&log_id=${log_id}&type=4`;
-                $.ajax({type: 'GET',url: jumpurl, dataType: 'json',
-                    success: function(resp) {
-                        if (resp.code == 200 && resp.data.openlink) {
-                            wxMiniUrl = resp.data.openlink;
-                            strgJump('ext')
-                        }
-                    },
-                    fail: function(err) { alert('请求接口报错');},
-                    complete: function(resp) {
-                        if (resp.status == 500) alert('请求接口报错');
-                    }
-                })
+                // $.ajax({type: 'GET',url: jumpurl, dataType: 'json',
+                //     success: function(resp) {
+                //         if (resp.code == 200 && resp.data.openlink) {
+                //             wxMiniUrl = resp.data.openlink;
+                //             strgJump('ext')
+                //         }
+                //     },
+                //     fail: function(err) { alert('请求接口报错');},
+                //     complete: function(resp) {
+                //         if (resp.status == 500) alert('请求接口报错');
+                //     }
+                // })
             }
         }
         function strgJump (typ) {
