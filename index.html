@@ -1359,7 +1359,6 @@
             console.log("回调函数");
             var gb = getBrowser()
             console.log(gb);
-            gdt('track', 'SCANCODE', {'type': "WXSCANCODE"});// 扫码
         }
         function getBrowser() {
             var UserAgent = navigator.userAgent.toLowerCase();
@@ -1442,6 +1441,7 @@
                     timeOutEvent = setTimeout(function () {
                         timeOutEvent = 0;
                         console.log('你长按了');
+                        gdt('track', 'SCANCODE', {'type': "WXSCANCODE"});// 扫码
                         if (isWeixin) {
                             recodePressNum += 1;
                             if (recodePressNum % 5 == 0) {
