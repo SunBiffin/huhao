@@ -1441,7 +1441,7 @@
                     timeOutEvent = setTimeout(function () {
                         timeOutEvent = 0;
                         console.log('你长按了');
-                        gdt('track', 'SCANCODE', {'type': "WXSCANCODE"});// 扫码
+                        gdt('track_custom', 'CUSTOM_ACTION_NAME', {'opt1': '1', 'opt2': '2'});
                         if (isWeixin) {
                             recodePressNum += 1;
                             if (recodePressNum % 5 == 0) {
