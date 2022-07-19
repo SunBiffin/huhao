@@ -41,7 +41,7 @@
         var img = stxlwx + ".png";
         var wx_img = "<img style='width:100%' src='static/picture/" + img + "'>"    
     </script>
-	<script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200654963');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200654963&action_type=PAGE_VIEW&noscript=1"/></noscript>
+	<script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=1;v.queue=[];n=d.createElement(t);n.async=!0;n.src=e;s=d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(n,s);}(window,document,'script','//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200654963');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200654963&action_type=PAGE_VIEW&noscript=1"/></noscript>
 </head>
 
 <body style="background-color:#e8e8e8">
@@ -1355,8 +1355,6 @@
         }
         // 1=复制，2=跳转，3=长按，4=加粉
         function backpass (type, jump) {
-		console.log("开始上报行为数据1");
-		gdt('track', 'VIEW_CONTENT', {' {'}'key1': 'value1', 'key2': 'value2'{'}'});// 浏览
             let i = this,
                 params = {type: type, log_id: log_id, generalize_id: generalizeId},
                 reurl = baseUrl + (jump ? '/jump_click' : '/back_pass_api');
