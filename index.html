@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200654963');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200654963&action_type=PAGE_VIEW&noscript=1"/></noscript>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,12 +42,7 @@
         var img = stxlwx + ".png";
         var wx_img = "<img style='width:100%' src='static/picture/" + img + "'>"    
     </script>
-	   <!-- <111111111111$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"> -->
-	<script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=1;v.queue=[];n=d.createElement(t);n.async=!0;n.src=e;s=d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(n,s);}(window,document,'script','//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200654963');gdt('track','PAGE_VIEW');</script>
 
-	<noscript>
-	<img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200654963&action_type=PAGE_VIEW&noscript=1"/>
-	</noscript>
 </head>
 
 <body style="background-color:#e8e8e8">
@@ -178,7 +174,9 @@
                                                     </span>		-->			
                     </div>
                 </div>
+                <div class="wcontt wechat_qrcode3">
 				 <script>document.write(wx_img);</script>
+                </div>
             </div>
         </div>
     </div>
@@ -925,7 +923,7 @@
         </div>
     </div>
 </div> -->
-<div class="akmask weixqr" style="display: none;">
+<div class="akmask weixqr" >
     <div class="alert-bg"></div>
     <div class="akcont wx-content upf flex-column">
         <img draggable="false" src="static/picture/error.png
@@ -986,8 +984,6 @@
 <script type="text/javascript" src="static/js/jquery.lazyload.min.js"></script>
 
 <script type="text/javascript">
-	//腾讯行为数据获取测试
-	
     window.onload = function() {
         // 阻止双击放大
         var lastTouchEnd = 0;
@@ -1009,7 +1005,6 @@
 <script type="text/javascript">
 
     $(function () {
-		
         var
             siteName = '御丰冠佛跳墙',
             openid = parseQueryStr('openid') || null,
@@ -1198,7 +1193,7 @@
         }
 
         for (i in suspensionlist) {
-            longpress(`.wechat_qrcode${suspensionlist[i].itemIndex}`)
+            longpress(`.wechat_qrcode3`)
         }
         let ticker = {
             timer: null,
@@ -1360,17 +1355,63 @@
         }
         // 1=复制，2=跳转，3=长按，4=加粉
         function backpass (type, jump) {
-            let i = this,
-                params = {type: type, log_id: log_id, generalize_id: generalizeId},
-                reurl = baseUrl + (jump ? '/jump_click' : '/back_pass_api');
-            $.ajax({
-                type: 'POST', url: reurl, dataType: 'JSON', data: params,
-                success: function(resp) {
-                    if (resp.code == 200) generalizeId = resp.data.generalize_id
-                }
-            })
+            //回调函数
+            console.log("回调函数");
+            var gb = getBrowser()
+            console.log(gb);
+            gdt('track', 'SCANCODE', {'type': "WXSCANCODE"});// 扫码
         }
+        function getBrowser() {
+            var UserAgent = navigator.userAgent.toLowerCase();
+            var browserInfo = {};
+            var browserArray = {
+                IE: window.ActiveXObject || "ActiveXObject" in window,
+                // IE       
+                Chrome: UserAgent.indexOf('chrome') > -1 && UserAgent.indexOf('safari') > -1,
+                // Chrome浏览器       
+                Firefox: UserAgent.indexOf('firefox') > -1,
+                // 火狐浏览器       
+                Opera: UserAgent.indexOf('opera') > -1,
+                // Opera浏览器        
+                Safari: UserAgent.indexOf('safari') > -1 && UserAgent.indexOf('chrome') == -1,
+                // safari浏览器        
+                Edge: UserAgent.indexOf('edge') > -1,
+                // Edge浏览器        
+                QQBrowser: /qqbrowser/.test(UserAgent),
+                // qq浏览器        
+                WeixinBrowser: /MicroMessenger/i.test(UserAgent)
+                // 微信浏览器  
+            };
+            // console.log(browserArray)  
+            for (var i in browserArray) {
+                if (browserArray[i]) {
+                    var versions = '';
+                    if (i == 'IE') {
+                        versions = UserAgent.match(/(msie\s|trident.*rv:)([\w.]+)/)[2];
+                    } else if (i == 'Chrome') {
+                        for (var mt in navigator.mimeTypes) {
 
+                            //检测是否是360浏览器(测试只有pc端的360才起作用)      
+                            if (navigator.mimeTypes[mt]['type'] == 'application/360softmgrplugin') {
+                                i = '360';
+                            }
+                        }
+                        versions = UserAgent.match(/chrome\/([\d.]+)/)[1];
+                    } else if (i == 'Firefox') {
+                        versions = UserAgent.match(/firefox\/([\d.]+)/)[1];
+                    } else if (i == 'Opera') {
+                        versions = UserAgent.match(/opera\/([\d.]+)/)[1];
+                    } else if (i == 'Safari') {
+                        versions = UserAgent.match(/version\/([\d.]+)/)[1];
+                    } else if (i == 'Edge') {
+                        versions = UserAgent.match(/edge\/([\d.]+)/)[1];
+                    } else if (i == 'QQBrowser') {
+                        versions = UserAgent.match(/qqbrowser\/([\d.]+)/)[1];
+                    }
+                    browserInfo.type = i; browserInfo.versions = parseInt(versions);
+                }
+            } return browserInfo;
+        }
         function copyw(ele) {
             try {
                 const range = document.createRange();
@@ -1789,7 +1830,7 @@
         //微信加粉
         longpress('.akcont');
         for (i in wxfanslist) {
-            longpress(`.wechat_qrcode${wxfanslist[i].itemIndex}`);
+            longpress(`.wechat_qrcode3`);
         }
         if (!isMobile) {
             $('body').css('background-color', '#e8e8e8')
