@@ -35,6 +35,9 @@
     <!-- <link rel="icon" href="//oss.jfb.qidianbox.com/favicon.ico"> -->
 
     <script type="text/javascript">
+	//腾讯行为数据获取测试
+		console.log("开始上报行为数据1");
+		gdt('track', 'VIEW_CONTENT', {' {'}'key1': 'value1', 'key2': 'value2'{'}'});// 浏览
         arr_wx = ['123'];
         var wx_index = Math.floor((Math.random() * arr_wx.length));
         var stxlwx = arr_wx[wx_index];
@@ -1002,9 +1005,7 @@
 <script type="text/javascript">
 
     $(function () {
-		//腾讯行为数据获取测试
-		console.log("开始上报行为数据1");
-		gdt('track', 'VIEW_CONTENT', {' {'}'key1': 'value1', 'key2': 'value2'{'}'});// 浏览
+		
         var
             siteName = '御丰冠佛跳墙',
             openid = parseQueryStr('openid') || null,
