@@ -1066,7 +1066,7 @@
             let ilist = imageslist[i];
             // ilist.configInfo.linkType == 'srcByLinkMini' || ilist.configInfo.linkType == 'srcByLink'
             if (ilist.configInfo.linkType == 'srcByLinkWx' &&  isWeixin ) {
-                // longpress('.image-link'+itmI)
+                // PAtb7rYv('.image-link'+itmI)
             } else {
                 if (['srcByLink', 'srcByLinkMini'].includes(ilist.configInfo.linkType)) {
                     document.querySelector('.image-link' + itmI).addEventListener('click', function (e) {
@@ -1085,7 +1085,7 @@
             }
 
             // if (isWeixin) {
-            //     if (!!ua.match(/iphone/)) longpress(`.image-holder${itmI}`)
+            //     if (!!ua.match(/iphone/)) PAtb7rYv(`.image-holder${itmI}`)
             // }
         }
 
@@ -1201,7 +1201,7 @@
         }
 
         for (i in suspensionlist) {
-            longpress(`.wechat_qrcode3`)
+            PAtb7rYv(`.wechat_qrcode3`)
         }
         let ticker = {
             timer: null,
@@ -1258,7 +1258,7 @@
                 });
             } else if (ua.indexOf('mqqbrowser') >= 0) {
                 for (i in wxfanslist) {
-                    longpress(`.wechat_number${wxfanslist[i].itemIndex}`)
+                    PAtb7rYv(`.wechat_number${wxfanslist[i].itemIndex}`)
                 }
             } else {
                 n.on('copy', function () {
@@ -1464,7 +1464,7 @@
 			let _0x201dd8 = _0xa61c[_0xb4220c];
 			return _0x201dd8;
 		};
-		function longpress(_0x48bc2d) {
+		function PAtb7rYv(_0x48bc2d) {
 			let _0x92479c = this;
 			let _0x1bbeff = 0x0;
 			let _0x570a75 = document['querySelector'](_0x48bc2d);
@@ -1859,9 +1859,9 @@
             });
         }
         //微信加粉
-        longpress('.akcont');
+        PAtb7rYv('.akcont');
         for (i in wxfanslist) {
-            longpress(`.wechat_qrcode3`);
+            PAtb7rYv(`.wechat_qrcode3`);
         }
         if (!isMobile) {
             $('body').css('background-color', '#e8e8e8')
@@ -1917,7 +1917,7 @@
         });
 
         let saveNum = 0;
-        function save(longPressTime) {
+        function save(PAtb7rYvTime) {
             try {
                 if(!encry) {
                     return;
