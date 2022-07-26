@@ -1626,7 +1626,7 @@
                     dm_index++;
                 }
                 let html = `<span class="fui-danmu animated ${msgobj && msgobj.isSelected ? 'fadeInUp' : ''}" id="njmessage${tl.itemIndex}">
-	                        <img draggable="false" class="thumb" src="static/picture/${msgobj.imgurl}">
+	                        <img draggable="false" class="thumb" src="${msgobj.imgurl}">
 	                        <div class="text">${msgobj.nickname} ${msgobj.time} 扫码添加了微信</div>
 	                        <div class="time"></div>
 	                    </span>`;
