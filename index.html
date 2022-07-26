@@ -1021,13 +1021,6 @@
             isUC = ua.indexOf('ucbrowser') != -1,
             isIOS = !!ua.match(/(iPhone|iPod|ios|iOS|iPad)/i);
 
-        document.title = siteName;
-        if(baseUrl == '')
-        {
-            baseUrl = window.location.origin;
-        }else{
-            baseUrl = '//' + baseUrl;
-        }
 
         function parseQueryStr(key) {
             var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
