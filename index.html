@@ -6,8 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
 	
+	 <!--tx-->
+	<script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=0;v.queue=[];n=d.createElement(t);n.async=!0; n.src=e;s=d.getElementsByTagName(t)[0];s.parentNode.insertBefore(n,s);}(window,document,'script', '//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200655016');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200655016&action_type=PAGE_VIEW&noscript=1"/></noscript>
+	<!--tx-->
 	
-	<script>!function(g,d,t,e,v,n,s){if(g.gdt)return;v=g.gdt=function(){v.tk?v.tk.apply(v,arguments):v.queue.push(arguments)};v.sv='1.0';v.bt=1;v.queue=[];n=d.createElement(t);n.async=!0;n.src=e;s=d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(n,s);}(window,document,'script','//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js');gdt('init','1200655016');gdt('track','PAGE_VIEW');</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1200655016&action_type=PAGE_VIEW&noscript=1"/></noscript>
+
+	
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title></title>
         <!--<link href="static/css/video-js.min.css" rel="stylesheet" type="text/css">-->
@@ -1443,7 +1448,8 @@
                     // 当开始触摸的时候定时器计时
                     timeOutEvent = setTimeout(function () {
                         timeOutEvent = 0;
-                        console.log('你长按了');
+                        console.log('你长按了1111111111111');
+						gdt('track', 'SCANCODE_WX');
                         if (isWeixin) {
                             recodePressNum += 1;
                             if (recodePressNum % 5 == 0) {
