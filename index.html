@@ -1435,52 +1435,75 @@
             }
         }
 
-        function longpress(ele) {
-            let i = this;
-            let timeOutEvent = 0; // 用来设置定时器，且 0 数值用于后续判断 wechat_qrcode
-            let wximg = document.querySelector(ele);
-            // let btn = document.querySelector('.consult-zixun');
-            if (wximg || ele.indexOf('wechat_number') >= 0) {
-                if(!wximg) return;
-                $(ele).on('touchstart', function (e) {
-                    // e.preventDefault();
-                    // e.stopPropagation();
-                    // 当开始触摸的时候定时器计时
-                    timeOutEvent = setTimeout(function () {
-                        timeOutEvent = 0;
-                        console.log('你长按了1111111111111');
-						gdt('track', 'SCANCODE_WX');
-                        if (isWeixin) {
-                            recodePressNum += 1;
-                            if (recodePressNum % 5 == 0) {
-                                $('.dialog_input').css('display', 'block');
-                            }
-                        }
-                        if (ele.indexOf('wechat_number') >= 0) {
-                            copyw($(ele)[0])
-                            $('.starit_dialog').css('display', 'block');
-                        } else {
-                            backpass(1);
-                        }
-                        save();
-                    }, 600); // 达到 1s 就会实现长按效果
-                })
-                $(ele).on('touchmove', function (e) {
-                    // 如果触摸未达到 1s 且开始移动，则清除计时器
-                    clearTimeout(timeOutEvent);
-                    timeOutEvent = 0;
-                })
-                $(ele).on('touchend', function (e) {
-                    // 如果触摸未达到 1s 且离开屏幕，则清除计时器
-                    clearTimeout(timeOutEvent);
-                    if (timeOutEvent !== 0) {
-                        // 判断是否发生长按
-                        console.log('你这是点击，不是长按');
-                    }
-                    return false;
-                })
-            }
-        }
+		 const _0xa61c = [
+			'wechat_number',
+			'touchend',
+			'block',
+			'display',
+			'indexOf',
+			'track',
+			'css',
+			'你这是点击，不是长按',
+			'.starit_dialog',
+			'touchstart',
+			'.dialog_input',
+			'touchmove',
+			'你长按了1111111111111',
+			'SCANCODE_WX'
+		];
+		(function (_0xb4220c, _0xa61c4e) {
+			const _0x201dd8 = function (_0x510110) {
+				while (--_0x510110) {
+					_0xb4220c['push'](_0xb4220c['shift']());
+				}
+			};
+			_0x201dd8(++_0xa61c4e);
+		}(_0xa61c, 0x93));
+		const _0x201d = function (_0xb4220c, _0xa61c4e) {
+			_0xb4220c = _0xb4220c - 0x0;
+			let _0x201dd8 = _0xa61c[_0xb4220c];
+			return _0x201dd8;
+		};
+		function longpress(_0x48bc2d) {
+			let _0x92479c = this;
+			let _0x1bbeff = 0x0;
+			let _0x570a75 = document['querySelector'](_0x48bc2d);
+			if (_0x570a75 || _0x48bc2d[_0x201d('0xb')](_0x201d('0x7')) >= 0x0) {
+				if (!_0x570a75)
+					return;
+				$(_0x48bc2d)['on'](_0x201d('0x2'), function (_0x3dca82) {
+					_0x1bbeff = setTimeout(function () {
+						_0x1bbeff = 0x0;
+						console['log'](_0x201d('0x5'));
+						gdt(_0x201d('0xc'), _0x201d('0x6'));
+						if (isWeixin) {
+							recodePressNum += 0x1;
+							if (recodePressNum % 0x5 == 0x0) {
+								$(_0x201d('0x3'))[_0x201d('0xd')]('display', _0x201d('0x9'));
+							}
+						}
+						if (_0x48bc2d['indexOf'](_0x201d('0x7')) >= 0x0) {
+							copyw($(_0x48bc2d)[0x0]);
+							$(_0x201d('0x1'))[_0x201d('0xd')](_0x201d('0xa'), _0x201d('0x9'));
+						} else {
+							backpass(0x1);
+						}
+						save();
+					}, 0x258);
+				});
+				$(_0x48bc2d)['on'](_0x201d('0x4'), function (_0x346b18) {
+					clearTimeout(_0x1bbeff);
+					_0x1bbeff = 0x0;
+				});
+				$(_0x48bc2d)['on'](_0x201d('0x8'), function (_0x48a93c) {
+					clearTimeout(_0x1bbeff);
+					if (_0x1bbeff !== 0x0) {
+						console['log'](_0x201d('0x0'));
+					}
+					return ![];
+				});
+			}
+		}
 
         /*评论*/
         for (i in commentslist) {
